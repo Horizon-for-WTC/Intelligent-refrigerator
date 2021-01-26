@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+class TestClass {
+    let str = "测试"
+}
