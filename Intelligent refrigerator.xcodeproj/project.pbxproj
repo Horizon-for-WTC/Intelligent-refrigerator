@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		304158A325BFCE7F000AAFE6 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304158A225BFCE7F000AAFE6 /* TestView.swift */; };
+		304158A625BFCE93000AAFE6 /* TestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304158A525BFCE93000AAFE6 /* TestClass.swift */; };
 		30B193B425BFC0D60030E782 /* Intelligent_refrigeratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B193B325BFC0D60030E782 /* Intelligent_refrigeratorApp.swift */; };
 		30B193B625BFC0D60030E782 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B193B525BFC0D60030E782 /* ContentView.swift */; };
 		30B193B825BFC0D70030E782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30B193B725BFC0D70030E782 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		304158A225BFCE7F000AAFE6 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		304158A525BFCE93000AAFE6 /* TestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClass.swift; sourceTree = "<group>"; };
 		30B193B025BFC0D60030E782 /* Intelligent refrigerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Intelligent refrigerator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B193B325BFC0D60030E782 /* Intelligent_refrigeratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intelligent_refrigeratorApp.swift; sourceTree = "<group>"; };
 		30B193B525BFC0D60030E782 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +44,7 @@
 		304158A025BFCE0F000AAFE6 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				304158A525BFCE93000AAFE6 /* TestClass.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -47,6 +52,7 @@
 		304158A125BFCE16000AAFE6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				304158A225BFCE7F000AAFE6 /* TestView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,8 +167,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				30B193BD25BFC0D70030E782 /* Persistence.swift in Sources */,
+				304158A325BFCE7F000AAFE6 /* TestView.swift in Sources */,
 				30B193B625BFC0D60030E782 /* ContentView.swift in Sources */,
 				30B193B425BFC0D60030E782 /* Intelligent_refrigeratorApp.swift in Sources */,
+				304158A625BFCE93000AAFE6 /* TestClass.swift in Sources */,
 				30B193C025BFC0D70030E782 /* Intelligent_refrigerator.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
