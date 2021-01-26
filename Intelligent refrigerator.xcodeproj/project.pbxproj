@@ -56,6 +56,8 @@
 		30B193B225BFC0D60030E782 /* Intelligent refrigerator */ = {
 			isa = PBXGroup;
 			children = (
+				30B193C925BFC1140030E782 /* View */,
+				30B193C825BFC1070030E782 /* Class */,
 				30B193B325BFC0D60030E782 /* Intelligent_refrigeratorApp.swift */,
 				30B193B525BFC0D60030E782 /* ContentView.swift */,
 				30B193B725BFC0D70030E782 /* Assets.xcassets */,
@@ -73,6 +75,21 @@
 				30B193BA25BFC0D70030E782 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		30B193C825BFC1070030E782 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Class;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		30B193C925BFC1140030E782 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
