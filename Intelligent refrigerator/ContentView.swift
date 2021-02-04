@@ -34,7 +34,7 @@ struct ContentView: View {
 //        }
         ZStack{
             VStack{
-                TopBar()
+                TopBarView()
                 TimeAndWeatherView()
                 Spacer()
             }

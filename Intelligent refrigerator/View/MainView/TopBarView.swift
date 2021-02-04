@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TopBar: View {
+struct TopBarView: View {
     var body: some View {
         HStack{
             Spacer()
@@ -24,8 +24,8 @@ struct TopBar: View {
     }
 }
 
-struct TopBar_Previews: PreviewProvider {
+struct TopBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TopBar()
+        TopBarView()
     }
 }

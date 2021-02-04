@@ -22,9 +22,9 @@ struct TimeAndWeatherView: View {
                 }
                 HStack{
                     Text("10月31日 | 星期几")
-                        .font(.custom("", size: 20))
+                        .font(.custom("", size: 23))
                         .padding(.horizontal)
-                    Text("    99℃")
+                    Text("99℃")
                         .font(.custom("", size: 20))
                 }
             }.padding()
