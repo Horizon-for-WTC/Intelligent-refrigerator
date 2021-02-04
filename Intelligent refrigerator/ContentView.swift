@@ -33,8 +33,10 @@ struct ContentView: View {
 //            }
 //        }
         ZStack{
-            HStack{
-                Text("12312333123123123")
+            VStack{
+                TopBar()
+                TimeAndWeatherView()
+                Spacer()
             }
         }
     }
