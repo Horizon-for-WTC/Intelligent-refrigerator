@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07E5328E25D2640500D21F88 /* HomepageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5328D25D2640500D21F88 /* HomepageView.swift */; };
 		30145FAC25CB99680063D2D1 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30145FAB25CB99680063D2D1 /* TopBarView.swift */; };
 		30145FB025CB9AD30063D2D1 /* TimeAndWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30145FAF25CB9AD30063D2D1 /* TimeAndWeatherView.swift */; };
 		304158A625BFCE93000AAFE6 /* TestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304158A525BFCE93000AAFE6 /* TestClass.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07E5328D25D2640500D21F88 /* HomepageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageView.swift; sourceTree = "<group>"; };
 		30145FAB25CB99680063D2D1 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		30145FAF25CB9AD30063D2D1 /* TimeAndWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAndWeatherView.swift; sourceTree = "<group>"; };
 		304158A525BFCE93000AAFE6 /* TestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClass.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07E5328C25D2626F00D21F88 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				07E5328D25D2640500D21F88 /* HomepageView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 		30145FA925CB98D10063D2D1 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +73,7 @@
 		304158A125BFCE16000AAFE6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				07E5328C25D2626F00D21F88 /* HomeView */,
 				30145FA925CB98D10063D2D1 /* MainView */,
 			);
 			path = View;
@@ -183,6 +194,7 @@
 				30B193B625BFC0D60030E782 /* ContentView.swift in Sources */,
 				30B193B425BFC0D60030E782 /* Intelligent_refrigeratorApp.swift in Sources */,
 				304158A625BFCE93000AAFE6 /* TestClass.swift in Sources */,
+				07E5328E25D2640500D21F88 /* HomepageView.swift in Sources */,
 				30B193C025BFC0D70030E782 /* Intelligent_refrigerator.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
