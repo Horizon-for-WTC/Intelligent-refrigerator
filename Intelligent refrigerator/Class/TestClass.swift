@@ -9,4 +9,8 @@ import Foundation
 
 class TestClass {
     let str = "测试"
+    
+    func myprint() -> Void {
+        print(str)
+    }
 }
