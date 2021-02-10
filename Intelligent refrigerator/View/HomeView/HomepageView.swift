@@ -18,76 +18,75 @@ struct HomepageView: View {
             dataformatter.dateFormat="MM月dd日 | EEEE"
             return dataformatter
         }   //日期格式
-    @State var  stardmusic=0.0           //音乐默认起始时间
-    @State var  endmusic=3.0             //音乐结束时间
-    @State var  isplay=false            //音乐是否播放
+    @State var  stardmusic=0.0            //音乐默认起始时间
+    @State var  endmusic=3.0              //音乐结束时间
+    @State var  isplay=false             //音乐是否播放
+    @State var  isstr=0                 //判断留言数量是否为空
+           var foods=["西红柿","生菜","火龙果"]     //过期或临期食物数组     内容为过期时间最长的三个
     var body: some View {
         NavigationView {
             VStack
             {
-                //头部区域
-                HStack
-                {
-                    VStack(alignment: .leading)
+                //头部时间区域
+                HStack(alignment: .bottom, spacing: 8.0)
                     {
-                        HStack
+                        VStack(alignment: .leading)
                         {
                             Text(Date() as NSObject,formatter: formater)
                                 .font(.system(size: 75))
                                 .fontWeight(.semibold)
                                        //时间
-                            Image(systemName: "drop.fill")
-                                .resizable()
-                                .frame(width: 30, height: 50) //天气
-                                .padding(.horizontal, 60.0)
-                        }
-                        HStack
-                        {
                             Text(Date(),formatter: formater2)
                                 .font(.system(size: 23))
                                 .padding(.horizontal)   //日期
+                            
+                        }
+                        VStack
+                        {
+                            Image(systemName: "drop.fill")
+                                .resizable()
+                                .frame(width: 30, height: 50) //天气
                             Text("20℃")                 //温度
                                 .font(.system(size: 20))
-                                .padding(.horizontal)
+                                .padding(.top)
                         }
+                        Spacer()
                     }
-                    Spacer()
-                }
-                .padding([.top, .leading, .bottom])
-                //底部区域
-                HStack
+                .padding(.horizontal, 30.0)
+                //底部功能区域
+                HStack(alignment: .top, spacing: 15.0)
                 {   //左侧
-                    VStack
+                    VStack(spacing: 10.0)
                     {
                         //菜谱功能
-                        VStack(alignment: .leading)
+                        VStack
                                 {
                                     HStack
                                     {
                                         Text("菜谱推荐")
                                             .foregroundColor(.white)
-                                            .font(.custom("", fixedSize:24))
+                                            .font(.custom("", fixedSize:40))
                                         Spacer()
                                         
                                     }
                                     .padding()
-                                    Image("perch")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: UIScreen.main.bounds.width/2-30, height: 200)
+                                    //点击菜谱跳转到对应页面
+                                    Button(action: {}, label: {
+                                        Image("perch")          //菜谱图片 跟换名字达到轮播图效果
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 300, height: 300)
+                                    })
                                 }
-                                .frame(width: UIScreen.main.bounds.width/2, height: 300)
+                                .frame(width: UIScreen.main.bounds.width/2-40, height: 450)
                                 .background(Color.gray)
-                                .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                        .clipShape(RoundedRectangle(cornerRadius: 10.0))
                         
                         //留言板功能
-                        ZStack
+                        VStack
                         {
-                            RoundedRectangle(cornerRadius: 25.0)
-                                .fill(Color.gray)
-                                .frame(width: UIScreen.main.bounds.width/2, height: 200)
                             HStack
-                            {
+                            {   //跳转到写留言
                                 Button(action: {}, label: {
                                     VStack(spacing: 10.0)
                                     {
@@ -100,61 +99,103 @@ struct HomepageView: View {
                                         .clipShape(Capsule())
                                     }.foregroundColor(.white)
                                 })
-                            
-                                Button(action: {}, label: {
-                                    
-                                })
+                                //最新的一条留言
+                                //判断是否有留言有就显示
+                                if isstr>0{
+                                VStack(spacing: 10.0)
+                                {
+                                   Text("2月10日 10:20")//备忘录时间
+                                   Text("消息")//备忘录信息  **注意换行
+                                }
+                                .frame(width: UIScreen.main.bounds.width/2-140, height: 200)
+                                .background(Color.yellow)
+                                }
                             }
                         }
+                        .frame(width: UIScreen.main.bounds.width/2-40, height: 200)
+                        .background(Color.gray)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
                         //冰箱控制功能
                         VStack
                         {
                             VStack(alignment: .leading)
                             {
-                                Text("冰箱控制")
-                                    .font(.system(size: 40))
-                                    .padding(.trailing, 200)
+                                HStack {
+                                    Text("冰箱控制")
+                                        .font(.system(size: 40))
+                                    Spacer()
+                                }
                                 Text("您的冰箱现在很健康哦～")       //冰箱状态
                             }
-                            HStack
-                            {
-                                VStack
-                                {
-                                    Text("4")                  //冰箱冷藏温度
-                                        .font(.system(size: 50))
-                                        .padding(.horizontal)
-                                    Text("冷藏℃")
+                            .padding(.horizontal)
+                            //预设的模式
+                                ScrollView(.horizontal, showsIndicators: false){
+                                    HStack(spacing: 18.0) {
+                                        //跳转到调温界面
+                                        Button(action: {
+                                        }, label: {
+                                            VStack {
+                                                Image("perch")
+                                                    .resizable()
+                                                    .frame(width: 60, height: 60)
+                                                    .clipShape(Circle())
+                                                Text("智能")
+                                            }
+                                        })
+                                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                                            VStack {
+                                                Image("perch")
+                                                    .resizable()
+                                                    .frame(width: 60, height: 60)
+                                                    .clipShape(Circle())
+                                                Text("节能")
+                                            }
+                                        })
+                                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                                            VStack {
+                                                Image("perch")
+                                                    .resizable()
+                                                    .frame(width: 60, height: 60)
+                                                    .clipShape(Circle())
+                                                Text("假日")
+                                            }
+                                        })
+                                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                                            VStack {
+                                                Image("perch")
+                                                    .resizable()
+                                                    .frame(width: 60, height: 60)
+                                                    .clipShape(Circle())
+                                                Text("自定义")
+                                            }
+                                        })
+                                    }
                                 }
                                 .padding()
-                                Text("|")
-                                    .font(.system(size: 50))
-                                VStack
-                                {
-                                    Text("-14")             //冰箱冷冻温度
-                                        .font(.system(size: 50))
-                                        .padding(.horizontal)
-                                    Text("冷冻℃")
-                                }
-                            }
                         }
                         .foregroundColor(.white)
-                        .frame(width: UIScreen.main.bounds.width/2, height: 200)
+                        .frame(width: UIScreen.main.bounds.width/2-40, height: 200)
                         .background(Color.gray)
-                        .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                        .clipShape(RoundedRectangle(cornerRadius: 10.0))
                         
                     }
                     //右侧
-                    VStack
+                    VStack(spacing: 10.0)
                     {
                         //音乐区
-                        HStack
+                        HStack(alignment: .top)
                         {
-                            Image("perch")                  //歌曲缩略图
+                            Image("perch")
+                                .resizable()
+                                .frame(width: 100, height: 100)
+                                .cornerRadius(3.0)//歌曲缩略图
                             VStack(alignment: .leading, spacing: 6.0)
                             {
-                                Text("周杰伦")              //歌手
-                                Text("告白气球")            //歌曲
-                                Slider(value: $stardmusic)
+                                Text("周杰伦")
+                                    .font(.subheadline)//歌手
+                                Text("告白气球")
+                                    .font(.headline)//歌曲
+                                Slider(value: $stardmusic,in:0...endmusic)
                                 HStack
                                 {
                                     Text("\(stardmusic,specifier: "%.2f")")
@@ -167,26 +208,26 @@ struct HomepageView: View {
                                     Spacer()
                                     Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                                         Image(systemName: "backward.end.fill")
-                                    })
+                                    })                      //上一曲
                                     Spacer()
                                     Button(action: {
                                         self.isplay.toggle()
                                     }, label: {
                                         Image(systemName: isplay ? "pause.fill" : "play.fill")
-                                    })
+                                    })                      //暂停播放
                                     Spacer()
-                                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                                    Button(action: {}, label: {
                                         Image(systemName: "forward.end.fill")
-                                    })
+                                    })                      //下一曲
                                     .padding(.trailing)
                                     Spacer()
                                 }
                             }
                         }
-                        .frame(width: UIScreen.main.bounds.width/2-30, height: 200)
+                        .frame(width: UIScreen.main.bounds.width/2-40, height: 200)
                         .background(Color.gray)
                         .foregroundColor(.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                        .clipShape(RoundedRectangle(cornerRadius: 10.0))
                         //食物区
                         VStack(alignment: .leading)
                         {
@@ -195,47 +236,36 @@ struct HomepageView: View {
                                     .font(.system(size: 40))
                                 Spacer()
                             }
-                            HStack
-                            {
-                                Image("perch")              //食物图片
-                                    .resizable()
-                                    .aspectRatio(1, contentMode: .fit)
-                                    .clipShape(Circle())
-                                    .frame(width: 60, height: 60, alignment: .center)
-                                VStack(alignment: .leading)
+                            //最近过期食物
+                            ForEach(foods, id: \.self) { item in
+                                HStack
                                 {
-                                    Text("西红柿")                 //食物名称
-                                    HStack
+                                    Image("perch")              //食物图片
+                                        .resizable()
+                                        .aspectRatio(1, contentMode: .fit)
+                                        .frame(width: 80, height: 80, alignment: .center)
+                                        .clipShape(Circle())
+                                    VStack(alignment: .leading, spacing: 6.0)
                                     {
-                                        Image(systemName: "exclamationmark.triangle")
-                                        Text("已过期")             //食物状态
+                                        Text(item)                 //食物名称
+                                            .font(.title)
+                                        HStack
+                                        {
+                                            Image(systemName: "exclamationmark.triangle")
+                                            Text("距离过期1天")             //食物状态
+                                                .font(.system(size: 18))
+                                        }
                                     }
+                                    
                                 }
-                                
+                                .padding(.vertical)
                             }
-                            HStack
-                            {
-                                Image("perch")              //食物图片
-                                    .resizable()
-                                    .aspectRatio(1, contentMode: .fit)
-                                    .frame(width: 60, height: 60, alignment: .center)
-                                    .clipShape(Circle())
-                                VStack(alignment: .leading)
-                                {
-                                    Text("生菜")                 //食物名称
-                                    HStack
-                                    {
-                                        Image(systemName: "exclamationmark.triangle")
-                                        Text("距离过期1天")             //食物状态
-                                    }
-                                }
-                                
-                            }
+                            Spacer()
                         }
                         .padding()
-                        .frame(width: UIScreen.main.bounds.width/2-30, height: 300)
+                        .frame(width: UIScreen.main.bounds.width/2-40, height: 450)
                         .background(Color.gray)
-                        .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                        .clipShape(RoundedRectangle(cornerRadius: 10.0))
                         .foregroundColor(.white)
                         //功能区
                         VStack {
@@ -248,7 +278,7 @@ struct HomepageView: View {
                                         .resizable()
                                         .aspectRatio(1, contentMode: .fit)
                                         .frame(width: 60, height: 60)
-                                        .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                                        .clipShape(RoundedRectangle(cornerRadius: 10.0))
                                        Text("定时器")
                                     }
                                 })
@@ -260,7 +290,7 @@ struct HomepageView: View {
                                         .resizable()
                                         .aspectRatio(1, contentMode: .fit)
                                         .frame(width: 60, height: 60)
-                                        .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                                        .clipShape(RoundedRectangle(cornerRadius: 10.0))
                                        Text("门铃")
                                     }
                                 })
@@ -272,7 +302,7 @@ struct HomepageView: View {
                                         .resizable()
                                         .aspectRatio(1, contentMode: .fit)
                                         .frame(width: 60, height: 60)
-                                        .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                                        .clipShape(RoundedRectangle(cornerRadius: 10.0))
                                        Text("电话")
                                     }
                                 })
@@ -281,15 +311,16 @@ struct HomepageView: View {
                             Spacer()
                         }
                         .padding()
-                        .frame(width: UIScreen.main.bounds.width/2-30, height: 200)
+                        .frame(width: UIScreen.main.bounds.width/2-40, height: 200)
                         .background(Color.gray)
-                        .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                        .clipShape(RoundedRectangle(cornerRadius: 10.0))
                         .foregroundColor(.white)
                     }
                 }
                 Spacer()
               
             }
+            .padding(.vertical, 60.0)
             .navigationBarHidden(true)
         }
         .navigationViewStyle(StackNavigationViewStyle())
