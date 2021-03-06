@@ -7,7 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07144B6825F10C7200C7AD42 /* NumberPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07144B6725F10C7200C7AD42 /* NumberPhone.swift */; };
+		07144B6C25F10F9E00C7AD42 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07144B6B25F10F9E00C7AD42 /* Answer.swift */; };
+		07144B6F25F1149300C7AD42 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07144B6E25F1149300C7AD42 /* Call.swift */; };
+		07144B7925F127B100C7AD42 /* OftenFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07144B7825F127B100C7AD42 /* OftenFood.swift */; };
+		071DCF5525ED8D690061CAD2 /* CookBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071DCF5425ED8D690061CAD2 /* CookBook.swift */; };
+		071DCF5925ED90350061CAD2 /* CookBookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071DCF5825ED90350061CAD2 /* CookBookData.swift */; };
+		071DCF5D25ED9CA00061CAD2 /* QuickerCook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071DCF5C25ED9CA00061CAD2 /* QuickerCook.swift */; };
+		07A71CF525F0343B002D57B1 /* Doorbell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A71CF425F0343B002D57B1 /* Doorbell.swift */; };
+		07A71CF825F036F2002D57B1 /* Doorbelled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A71CF725F036F2002D57B1 /* Doorbelled.swift */; };
+		07A71CFB25F03711002D57B1 /* Doorbellmessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A71CFA25F03711002D57B1 /* Doorbellmessage.swift */; };
+		07A71CFE25F0428C002D57B1 /* Thermostat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A71CFD25F0428C002D57B1 /* Thermostat.swift */; };
+		07BEA1A525EEE49C00C52870 /* CoolVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEA1A425EEE49C00C52870 /* CoolVideo.swift */; };
+		07BEA1A825EEEABF00C52870 /* Cookserch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEA1A725EEEABF00C52870 /* Cookserch.swift */; };
 		07E5328E25D2640500D21F88 /* HomepageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5328D25D2640500D21F88 /* HomepageView.swift */; };
+		07F66F9B25F24E2B003F5491 /* FoodLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F66F9A25F24E2B003F5491 /* FoodLabel.swift */; };
+		07F66F9E25F25339003F5491 /* AddFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F66F9D25F25339003F5491 /* AddFood.swift */; };
+		07F66FA125F25DD3003F5491 /* Foodmessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F66FA025F25DD3003F5491 /* Foodmessage.swift */; };
 		30145FAC25CB99680063D2D1 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30145FAB25CB99680063D2D1 /* TopBarView.swift */; };
 		30145FB025CB9AD30063D2D1 /* TimeAndWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30145FAF25CB9AD30063D2D1 /* TimeAndWeatherView.swift */; };
 		304158A625BFCE93000AAFE6 /* TestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304158A525BFCE93000AAFE6 /* TestClass.swift */; };
@@ -20,7 +36,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07144B6725F10C7200C7AD42 /* NumberPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPhone.swift; sourceTree = "<group>"; };
+		07144B6B25F10F9E00C7AD42 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		07144B6E25F1149300C7AD42 /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
+		07144B7825F127B100C7AD42 /* OftenFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OftenFood.swift; sourceTree = "<group>"; };
+		071DCF5425ED8D690061CAD2 /* CookBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBook.swift; sourceTree = "<group>"; };
+		071DCF5825ED90350061CAD2 /* CookBookData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookData.swift; sourceTree = "<group>"; };
+		071DCF5C25ED9CA00061CAD2 /* QuickerCook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickerCook.swift; sourceTree = "<group>"; };
+		07A71CF425F0343B002D57B1 /* Doorbell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doorbell.swift; sourceTree = "<group>"; };
+		07A71CF725F036F2002D57B1 /* Doorbelled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doorbelled.swift; sourceTree = "<group>"; };
+		07A71CFA25F03711002D57B1 /* Doorbellmessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doorbellmessage.swift; sourceTree = "<group>"; };
+		07A71CFD25F0428C002D57B1 /* Thermostat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thermostat.swift; sourceTree = "<group>"; };
+		07BEA1A425EEE49C00C52870 /* CoolVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolVideo.swift; sourceTree = "<group>"; };
+		07BEA1A725EEEABF00C52870 /* Cookserch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cookserch.swift; sourceTree = "<group>"; };
 		07E5328D25D2640500D21F88 /* HomepageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageView.swift; sourceTree = "<group>"; };
+		07F66F9A25F24E2B003F5491 /* FoodLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodLabel.swift; sourceTree = "<group>"; };
+		07F66F9D25F25339003F5491 /* AddFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFood.swift; sourceTree = "<group>"; };
+		07F66FA025F25DD3003F5491 /* Foodmessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foodmessage.swift; sourceTree = "<group>"; };
 		30145FAB25CB99680063D2D1 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		30145FAF25CB9AD30063D2D1 /* TimeAndWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAndWeatherView.swift; sourceTree = "<group>"; };
 		304158A525BFCE93000AAFE6 /* TestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClass.swift; sourceTree = "<group>"; };
@@ -45,10 +77,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07144B6625F10C3F00C7AD42 /* CallPhone */ = {
+			isa = PBXGroup;
+			children = (
+				07144B6725F10C7200C7AD42 /* NumberPhone.swift */,
+				07144B6B25F10F9E00C7AD42 /* Answer.swift */,
+				07144B6E25F1149300C7AD42 /* Call.swift */,
+			);
+			path = CallPhone;
+			sourceTree = "<group>";
+		};
+		07144B7325F1234D00C7AD42 /* Doorbell */ = {
+			isa = PBXGroup;
+			children = (
+				07A71CF425F0343B002D57B1 /* Doorbell.swift */,
+				07A71CF725F036F2002D57B1 /* Doorbelled.swift */,
+				07A71CFA25F03711002D57B1 /* Doorbellmessage.swift */,
+			);
+			path = Doorbell;
+			sourceTree = "<group>";
+		};
+		07144B7725F1272F00C7AD42 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				07144B7825F127B100C7AD42 /* OftenFood.swift */,
+				07F66F9A25F24E2B003F5491 /* FoodLabel.swift */,
+				07F66F9D25F25339003F5491 /* AddFood.swift */,
+				07F66FA025F25DD3003F5491 /* Foodmessage.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		071DCF5725ED900E0061CAD2 /* UserData */ = {
+			isa = PBXGroup;
+			children = (
+				071DCF5825ED90350061CAD2 /* CookBookData.swift */,
+			);
+			path = UserData;
+			sourceTree = "<group>";
+		};
 		07E5328C25D2626F00D21F88 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
 				07E5328D25D2640500D21F88 /* HomepageView.swift */,
+				071DCF5425ED8D690061CAD2 /* CookBook.swift */,
+				071DCF5C25ED9CA00061CAD2 /* QuickerCook.swift */,
+				07BEA1A425EEE49C00C52870 /* CoolVideo.swift */,
+				07BEA1A725EEEABF00C52870 /* Cookserch.swift */,
+				07A71CFD25F0428C002D57B1 /* Thermostat.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -73,6 +149,9 @@
 		304158A125BFCE16000AAFE6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				07144B7725F1272F00C7AD42 /* Food */,
+				07144B6625F10C3F00C7AD42 /* CallPhone */,
+				07144B7325F1234D00C7AD42 /* Doorbell */,
 				07E5328C25D2626F00D21F88 /* HomeView */,
 				30145FA925CB98D10063D2D1 /* MainView */,
 			);
@@ -98,6 +177,7 @@
 		30B193B225BFC0D60030E782 /* Intelligent refrigerator */ = {
 			isa = PBXGroup;
 			children = (
+				071DCF5725ED900E0061CAD2 /* UserData */,
 				304158A125BFCE16000AAFE6 /* View */,
 				304158A025BFCE0F000AAFE6 /* Class */,
 				30B193B325BFC0D60030E782 /* Intelligent_refrigeratorApp.swift */,
@@ -189,13 +269,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				30B193BD25BFC0D70030E782 /* Persistence.swift in Sources */,
+				07F66FA125F25DD3003F5491 /* Foodmessage.swift in Sources */,
+				07BEA1A825EEEABF00C52870 /* Cookserch.swift in Sources */,
+				07144B6825F10C7200C7AD42 /* NumberPhone.swift in Sources */,
 				30145FAC25CB99680063D2D1 /* TopBarView.swift in Sources */,
+				07A71CFB25F03711002D57B1 /* Doorbellmessage.swift in Sources */,
 				30145FB025CB9AD30063D2D1 /* TimeAndWeatherView.swift in Sources */,
 				30B193B625BFC0D60030E782 /* ContentView.swift in Sources */,
+				07144B6C25F10F9E00C7AD42 /* Answer.swift in Sources */,
+				071DCF5925ED90350061CAD2 /* CookBookData.swift in Sources */,
 				30B193B425BFC0D60030E782 /* Intelligent_refrigeratorApp.swift in Sources */,
+				07A71CF825F036F2002D57B1 /* Doorbelled.swift in Sources */,
 				304158A625BFCE93000AAFE6 /* TestClass.swift in Sources */,
 				07E5328E25D2640500D21F88 /* HomepageView.swift in Sources */,
+				07144B7925F127B100C7AD42 /* OftenFood.swift in Sources */,
+				07F66F9B25F24E2B003F5491 /* FoodLabel.swift in Sources */,
+				07BEA1A525EEE49C00C52870 /* CoolVideo.swift in Sources */,
 				30B193C025BFC0D70030E782 /* Intelligent_refrigerator.xcdatamodeld in Sources */,
+				07A71CF525F0343B002D57B1 /* Doorbell.swift in Sources */,
+				071DCF5D25ED9CA00061CAD2 /* QuickerCook.swift in Sources */,
+				07A71CFE25F0428C002D57B1 /* Thermostat.swift in Sources */,
+				07F66F9E25F25339003F5491 /* AddFood.swift in Sources */,
+				07144B6F25F1149300C7AD42 /* Call.swift in Sources */,
+				071DCF5525ED8D690061CAD2 /* CookBook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
