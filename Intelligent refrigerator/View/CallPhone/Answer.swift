@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Answer: View {
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack {
             ZStack {
@@ -16,10 +17,10 @@ struct Answer: View {
                         .imageScale(.large)
                     Spacer()
                 }
-                .padding()
                 Text("来电")
                     .font(.title2)
-            }
+            }.foregroundColor(.white)
+            .padding(.horizontal)
             Spacer()
             VStack(spacing: 8.0) {
                 Image("cc")
@@ -28,10 +29,9 @@ struct Answer: View {
                     .aspectRatio(contentMode: .fill)
                     .clipShape(Circle())
                 Text("176 8377 0064")
-                    .foregroundColor(.black)
                     .font(.title2)
                 Text("湖北武汉")
-            }
+            }.foregroundColor(.white)
             Spacer()
             HStack{
                 Spacer()
@@ -41,7 +41,7 @@ struct Answer: View {
                 Spacer()
             }
             Spacer()
-        }
+        }.background(Color.gray.ignoresSafeArea())
     }
 }
 

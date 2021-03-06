@@ -8,21 +8,31 @@
 import SwiftUI
 
 struct QuickerCook: View {
+    @Environment(\.presentationMode) var presentationMode
     let columns=[GridItem(.adaptive(minimum: UIScreen.main.bounds.width/3))]
     var body: some View {
-        ScrollView {
-                LazyVGrid(columns: columns) {
-                    ForEach(0..<6) { item in
-                        Cookmenu()
+        VStack {
+            ZStack {
+                HStack {
+                    Image(systemName: "house")
+                        .imageScale(.large)
+                    Spacer()
+                    Image(systemName: "mic.fill")
+                        .imageScale(.large)
+                }
+                Text("快手菜")
+                    .font(.title2)
+            }
+            .foregroundColor(.white)
+            .padding(.horizontal)
+            ScrollView {
+                    LazyVGrid(columns: columns) {
+                        ForEach(0..<6) { item in
+                            Cookmenu()
+                        }
                     }
                 }
-            }
-        .background(Color.gray.ignoresSafeArea(.all))
-            .navigationBarTitle(Text("快手菜"), displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: {}, label: {
-                Image(systemName: "")
-                    .imageScale(.large)
-        }))
+        }.background(Color.gray.ignoresSafeArea(.all))
     }
 }
 

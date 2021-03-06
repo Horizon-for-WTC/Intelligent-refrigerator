@@ -8,9 +8,22 @@
 import SwiftUI
 
 struct Thermostat: View {
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
-        NavigationView {
             VStack {
+                ZStack {
+                    HStack {
+                        Image(systemName: "house")
+                            .imageScale(.large)
+                        Spacer()
+                        Image(systemName: "mic.fill")
+                            .imageScale(.large)
+                    }
+                    Text("冰箱控制")
+                        .font(.title2)
+                }
+                .foregroundColor(.white)
+                .padding(.horizontal)
                 ZStack {
                     VStack{
                         ZStack{
@@ -64,10 +77,9 @@ struct Thermostat: View {
                         .padding()
                     }.frame(width: UIScreen.main.bounds.width, height: 150, alignment: .center)
                     
-                }.background(Color.gray)
-            }.ignoresSafeArea()
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
+                }.background(Color.black.opacity(0.4).ignoresSafeArea())
+            }.background(Color.gray.edgesIgnoringSafeArea(.all))
+
     }
 }
 

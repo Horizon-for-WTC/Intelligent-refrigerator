@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OftenFood: View {
+    @Environment(\.presentationMode) var presentationMode
     @State var isshowAdd=false
     @State var isshowmessge=false
     var body: some View {

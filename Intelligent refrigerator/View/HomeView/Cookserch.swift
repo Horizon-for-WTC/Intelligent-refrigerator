@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct Cookserch: View {
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
-        VStack {
+        VStack(spacing: 15.0) {
+            ZStack {
+                HStack {
+                    Button(action: {}, label: {
+                        Image(systemName: "chevron.backward")
+                    })
+                    
+                    Spacer()
+                  
+                }
+                .padding(.horizontal)
+                Text("查找菜谱")
+                    .font(.title)
+            }
             Text("历史查找")
                 .font(.title)
             Divider()
@@ -29,12 +43,13 @@ struct Cookserch: View {
                 .foregroundColor(.white)
             })
             .frame(width: 100, height: 100, alignment: .center)
-            .background(Color.gray)
+            .background(Color.black.opacity(0.09))
             .clipShape(Circle())
             Text("切换文字查找")
                 .padding()
         }
-        
+        .foregroundColor(.white)
+        .background(Color.gray.ignoresSafeArea())
         .navigationBarTitle("查找菜谱", displayMode: .inline)
     }
 }

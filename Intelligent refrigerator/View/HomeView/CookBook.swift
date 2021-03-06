@@ -8,23 +8,44 @@
 import SwiftUI
 
 struct CookBook: View {
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
-            ScrollView(.vertical, showsIndicators: false){
-                VStack(spacing: 20.0) {
-                    Capsule()
-                        .fill(Color.gray)
-                        .frame(width: UIScreen.main.bounds.width-30, height: 36, alignment: .center)
-                    Circlestyle()
-                    BanderCook()
-                    BanderCook(title: "收藏菜谱", size: 150)
-                    BanderCook(title: "热门菜谱", size: 150 )
+        VStack {
+            ZStack {
+                HStack {
+                    Image(systemName: "house")
+                        .imageScale(.large)
+                    Spacer()
                 }
-            }
-            .navigationBarTitle(Text("菜谱"), displayMode: .inline)
-            .navigationBarItems(trailing: Button(action: {}, label: {
-                Image(systemName: "")
-                    .imageScale(.large)
+                Text("菜谱")
+                    .font(.title2)
+            }.foregroundColor(.white)
+            .padding(.horizontal)
+            ScrollView(.vertical, showsIndicators: false){
+                    VStack(spacing: 20.0) {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 25.0)
+                                .fill(Color.black.opacity(0.1))
+                                .frame(width: UIScreen.main.bounds.width-30, height: 40, alignment: .center)
+                            HStack{
+                                Image(systemName: "magnifyingglass").foregroundColor(.white)
+                                Text("请输入食材").foregroundColor(.gray)
+                                Spacer()
+                            }
+                            .padding(.horizontal,30)
+                        }
+                        Circlestyle()
+                        BanderCook()
+                        BanderCook(title: "收藏菜谱", size: 150)
+                        BanderCook(title: "热门菜谱", size: 150 )
+                    }
+                }
+                .navigationBarTitle(Text("菜谱"), displayMode: .inline)
+                .navigationBarItems(trailing: Button(action: {}, label: {
+                    Image(systemName: "")
+                        .imageScale(.large)
             }))
+        }.background(Color.gray.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/))
     }
 }
 

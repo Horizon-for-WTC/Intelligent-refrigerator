@@ -8,11 +8,13 @@
 import SwiftUI
 import AVKit
 struct CoolVideo: View {
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
 //        AVPlayer(url: URL("sss")!)
         VStack {
             ZStack(alignment: .topLeading) {
-                Rectangle()
+                Rectangle().edgesIgnoringSafeArea(.top
+                )
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                     Image(systemName: "chevron.left")
                         .imageScale(.large)
