@@ -18,7 +18,7 @@ struct Doorbell: View {
                             .imageScale(.large)
                         Spacer()
                     }
-                    Text("来电")
+                    Text("门铃")
                         .font(.title2)
                 }
                 .foregroundColor(.white)
