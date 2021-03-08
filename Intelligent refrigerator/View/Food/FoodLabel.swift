@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FoodLabel: View {
     let columns=[GridItem(.adaptive(minimum: UIScreen.main.bounds.width/5))]
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack(spacing: 20.0) {
             ZStack {
