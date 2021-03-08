@@ -22,9 +22,7 @@ struct ContentView: View {
         
         ZStack{
             VStack{
-                TopBarView()
-                TimeAndWeatherView()
-                Spacer()
+                HomepageView()
             }
         }
     }

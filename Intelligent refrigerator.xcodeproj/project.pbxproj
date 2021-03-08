@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,13 +26,15 @@
 		07F66FA125F25DD3003F5491 /* Foodmessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F66FA025F25DD3003F5491 /* Foodmessage.swift */; };
 		30145FAC25CB99680063D2D1 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30145FAB25CB99680063D2D1 /* TopBarView.swift */; };
 		30145FB025CB9AD30063D2D1 /* TimeAndWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30145FAF25CB9AD30063D2D1 /* TimeAndWeatherView.swift */; };
-		304158A625BFCE93000AAFE6 /* TestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304158A525BFCE93000AAFE6 /* TestClass.swift */; };
 		30B193B425BFC0D60030E782 /* Intelligent_refrigeratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B193B325BFC0D60030E782 /* Intelligent_refrigeratorApp.swift */; };
 		30B193B625BFC0D60030E782 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B193B525BFC0D60030E782 /* ContentView.swift */; };
 		30B193B825BFC0D70030E782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30B193B725BFC0D70030E782 /* Assets.xcassets */; };
 		30B193BB25BFC0D70030E782 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30B193BA25BFC0D70030E782 /* Preview Assets.xcassets */; };
 		30B193BD25BFC0D70030E782 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B193BC25BFC0D70030E782 /* Persistence.swift */; };
 		30B193C025BFC0D70030E782 /* Intelligent_refrigerator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30B193BE25BFC0D70030E782 /* Intelligent_refrigerator.xcdatamodeld */; };
+		30C7BF6F25F5D31500F1E39F /* WeatherAndLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C7BF6E25F5D31500F1E39F /* WeatherAndLocation.swift */; };
+		30C7BF7325F5D51400F1E39F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 30C7BF7225F5D51400F1E39F /* Alamofire */; };
+		30C7BF7725F5D56E00F1E39F /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 30C7BF7625F5D56E00F1E39F /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +57,6 @@
 		07F66FA025F25DD3003F5491 /* Foodmessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foodmessage.swift; sourceTree = "<group>"; };
 		30145FAB25CB99680063D2D1 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		30145FAF25CB9AD30063D2D1 /* TimeAndWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAndWeatherView.swift; sourceTree = "<group>"; };
-		304158A525BFCE93000AAFE6 /* TestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClass.swift; sourceTree = "<group>"; };
 		30B193B025BFC0D60030E782 /* Intelligent refrigerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Intelligent refrigerator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B193B325BFC0D60030E782 /* Intelligent_refrigeratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intelligent_refrigeratorApp.swift; sourceTree = "<group>"; };
 		30B193B525BFC0D60030E782 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 		30B193BC25BFC0D70030E782 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		30B193BF25BFC0D70030E782 /* Intelligent_refrigerator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Intelligent_refrigerator.xcdatamodel; sourceTree = "<group>"; };
 		30B193C125BFC0D70030E782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30C7BF6E25F5D31500F1E39F /* WeatherAndLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAndLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C7BF7725F5D56E00F1E39F /* SwiftyJSON in Frameworks */,
+				30C7BF7325F5D51400F1E39F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +145,7 @@
 		304158A025BFCE0F000AAFE6 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				304158A525BFCE93000AAFE6 /* TestClass.swift */,
+				30C7BF6E25F5D31500F1E39F /* WeatherAndLocation.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -215,6 +219,10 @@
 			dependencies = (
 			);
 			name = "Intelligent refrigerator";
+			packageProductDependencies = (
+				30C7BF7225F5D51400F1E39F /* Alamofire */,
+				30C7BF7625F5D56E00F1E39F /* SwiftyJSON */,
+			);
 			productName = "Intelligent refrigerator";
 			productReference = 30B193B025BFC0D60030E782 /* Intelligent refrigerator.app */;
 			productType = "com.apple.product-type.application";
@@ -242,6 +250,10 @@
 				Base,
 			);
 			mainGroup = 30B193A725BFC0D60030E782;
+			packageReferences = (
+				30C7BF7125F5D51400F1E39F /* XCRemoteSwiftPackageReference "Alamofire" */,
+				30C7BF7525F5D56E00F1E39F /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 30B193B125BFC0D60030E782 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -280,7 +292,6 @@
 				071DCF5925ED90350061CAD2 /* CookBookData.swift in Sources */,
 				30B193B425BFC0D60030E782 /* Intelligent_refrigeratorApp.swift in Sources */,
 				07A71CF825F036F2002D57B1 /* Doorbelled.swift in Sources */,
-				304158A625BFCE93000AAFE6 /* TestClass.swift in Sources */,
 				07E5328E25D2640500D21F88 /* HomepageView.swift in Sources */,
 				07144B7925F127B100C7AD42 /* OftenFood.swift in Sources */,
 				07F66F9B25F24E2B003F5491 /* FoodLabel.swift in Sources */,
@@ -292,6 +303,7 @@
 				07F66F9E25F25339003F5491 /* AddFood.swift in Sources */,
 				07144B6F25F1149300C7AD42 /* Call.swift in Sources */,
 				071DCF5525ED8D690061CAD2 /* CookBook.swift in Sources */,
+				30C7BF6F25F5D31500F1E39F /* WeatherAndLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +492,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		30C7BF7125F5D51400F1E39F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
+		30C7BF7525F5D56E00F1E39F /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		30C7BF7225F5D51400F1E39F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30C7BF7125F5D51400F1E39F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		30C7BF7625F5D56E00F1E39F /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30C7BF7525F5D56E00F1E39F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		30B193BE25BFC0D70030E782 /* Intelligent_refrigerator.xcdatamodeld */ = {
