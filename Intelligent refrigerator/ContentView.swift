@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIX
 import CoreData
 
 struct ContentView: View {
@@ -13,18 +14,13 @@ struct ContentView: View {
     init() {
         print("Init Start!!!")
         //you init code here
-        let myclass = TestClass()
-        myclass.myprint()
         print("Init down!!!")
     }
     
-    var body: some View {
-        
+    var body: some View {        
         ZStack{
             VStack{
-                TopBarView()
-                TimeAndWeatherView()
-                Spacer()
+                
             }
         }
     }
