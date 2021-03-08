@@ -37,6 +37,7 @@
 		30C7BF7725F5D56E00F1E39F /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 30C7BF7625F5D56E00F1E39F /* SwiftyJSON */; };
 		30C7BF7B25F5D9E200F1E39F /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 30C7BF7A25F5D9E200F1E39F /* SwiftUICharts */; };
 		30C7BF7F25F5DA7400F1E39F /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 30C7BF7E25F5DA7400F1E39F /* SwiftUIX */; };
+		30C7BF8525F61AA900F1E39F /* SwiftSpeech in Frameworks */ = {isa = PBXBuildFile; productRef = 30C7BF8425F61AA900F1E39F /* SwiftSpeech */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C7BF8525F61AA900F1E39F /* SwiftSpeech in Frameworks */,
 				30C7BF7B25F5D9E200F1E39F /* SwiftUICharts in Frameworks */,
 				30C7BF7725F5D56E00F1E39F /* SwiftyJSON in Frameworks */,
 				30C7BF7325F5D51400F1E39F /* Alamofire in Frameworks */,
@@ -228,6 +230,7 @@
 				30C7BF7625F5D56E00F1E39F /* SwiftyJSON */,
 				30C7BF7A25F5D9E200F1E39F /* SwiftUICharts */,
 				30C7BF7E25F5DA7400F1E39F /* SwiftUIX */,
+				30C7BF8425F61AA900F1E39F /* SwiftSpeech */,
 			);
 			productName = "Intelligent refrigerator";
 			productReference = 30B193B025BFC0D60030E782 /* Intelligent refrigerator.app */;
@@ -261,6 +264,7 @@
 				30C7BF7525F5D56E00F1E39F /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				30C7BF7925F5D9E200F1E39F /* XCRemoteSwiftPackageReference "ChartView" */,
 				30C7BF7D25F5DA7400F1E39F /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				30C7BF8325F61AA900F1E39F /* XCRemoteSwiftPackageReference "SwiftSpeech" */,
 			);
 			productRefGroup = 30B193B125BFC0D60030E782 /* Products */;
 			projectDirPath = "";
@@ -534,6 +538,14 @@
 				minimumVersion = 0.0.5;
 			};
 		};
+		30C7BF8325F61AA900F1E39F /* XCRemoteSwiftPackageReference "SwiftSpeech" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Cay-Zhang/SwiftSpeech.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -556,6 +568,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 30C7BF7D25F5DA7400F1E39F /* XCRemoteSwiftPackageReference "SwiftUIX" */;
 			productName = SwiftUIX;
+		};
+		30C7BF8425F61AA900F1E39F /* SwiftSpeech */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30C7BF8325F61AA900F1E39F /* XCRemoteSwiftPackageReference "SwiftSpeech" */;
+			productName = SwiftSpeech;
 		};
 /* End XCSwiftPackageProductDependency section */
 
