@@ -35,6 +35,8 @@
 		30C7BF6F25F5D31500F1E39F /* WeatherAndLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C7BF6E25F5D31500F1E39F /* WeatherAndLocation.swift */; };
 		30C7BF7325F5D51400F1E39F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 30C7BF7225F5D51400F1E39F /* Alamofire */; };
 		30C7BF7725F5D56E00F1E39F /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 30C7BF7625F5D56E00F1E39F /* SwiftyJSON */; };
+		30C7BF7B25F5D9E200F1E39F /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 30C7BF7A25F5D9E200F1E39F /* SwiftUICharts */; };
+		30C7BF7F25F5DA7400F1E39F /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 30C7BF7E25F5DA7400F1E39F /* SwiftUIX */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,8 +75,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C7BF7B25F5D9E200F1E39F /* SwiftUICharts in Frameworks */,
 				30C7BF7725F5D56E00F1E39F /* SwiftyJSON in Frameworks */,
 				30C7BF7325F5D51400F1E39F /* Alamofire in Frameworks */,
+				30C7BF7F25F5DA7400F1E39F /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +226,8 @@
 			packageProductDependencies = (
 				30C7BF7225F5D51400F1E39F /* Alamofire */,
 				30C7BF7625F5D56E00F1E39F /* SwiftyJSON */,
+				30C7BF7A25F5D9E200F1E39F /* SwiftUICharts */,
+				30C7BF7E25F5DA7400F1E39F /* SwiftUIX */,
 			);
 			productName = "Intelligent refrigerator";
 			productReference = 30B193B025BFC0D60030E782 /* Intelligent refrigerator.app */;
@@ -253,6 +259,8 @@
 			packageReferences = (
 				30C7BF7125F5D51400F1E39F /* XCRemoteSwiftPackageReference "Alamofire" */,
 				30C7BF7525F5D56E00F1E39F /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				30C7BF7925F5D9E200F1E39F /* XCRemoteSwiftPackageReference "ChartView" */,
+				30C7BF7D25F5DA7400F1E39F /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 			);
 			productRefGroup = 30B193B125BFC0D60030E782 /* Products */;
 			projectDirPath = "";
@@ -510,6 +518,22 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		30C7BF7925F5D9E200F1E39F /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.4;
+			};
+		};
+		30C7BF7D25F5DA7400F1E39F /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -522,6 +546,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 30C7BF7525F5D56E00F1E39F /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		30C7BF7A25F5D9E200F1E39F /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30C7BF7925F5D9E200F1E39F /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+		30C7BF7E25F5DA7400F1E39F /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30C7BF7D25F5DA7400F1E39F /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
 		};
 /* End XCSwiftPackageProductDependency section */
 

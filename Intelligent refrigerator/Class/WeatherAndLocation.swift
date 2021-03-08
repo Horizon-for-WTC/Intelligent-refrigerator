@@ -14,7 +14,7 @@ class LocationViewModel: NSObject, ObservableObject{
     
     @Published var userLatitude: Double = 39.9165
     @Published var userLongitude: Double = 116.3971
-    @Published var myLocalArea = "北京"//位置坐标默认背景天安门
+    @Published var myLocalArea = "北京"//位置坐标默认天安门
     
     private let locationManager = CLLocationManager()
     
