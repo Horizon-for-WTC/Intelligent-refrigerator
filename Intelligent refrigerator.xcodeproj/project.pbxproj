@@ -10,7 +10,6 @@
 		07144B6825F10C7200C7AD42 /* NumberPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07144B6725F10C7200C7AD42 /* NumberPhone.swift */; };
 		07144B6C25F10F9E00C7AD42 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07144B6B25F10F9E00C7AD42 /* Answer.swift */; };
 		07144B6F25F1149300C7AD42 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07144B6E25F1149300C7AD42 /* Call.swift */; };
-		07144B7925F127B100C7AD42 /* OftenFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07144B7825F127B100C7AD42 /* OftenFood.swift */; };
 		071DCF5525ED8D690061CAD2 /* CookBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071DCF5425ED8D690061CAD2 /* CookBook.swift */; };
 		071DCF5925ED90350061CAD2 /* CookBookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071DCF5825ED90350061CAD2 /* CookBookData.swift */; };
 		071DCF5D25ED9CA00061CAD2 /* QuickerCook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071DCF5C25ED9CA00061CAD2 /* QuickerCook.swift */; };
@@ -20,10 +19,12 @@
 		07A71CFE25F0428C002D57B1 /* Thermostat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A71CFD25F0428C002D57B1 /* Thermostat.swift */; };
 		07BEA1A525EEE49C00C52870 /* CoolVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEA1A425EEE49C00C52870 /* CoolVideo.swift */; };
 		07BEA1A825EEEABF00C52870 /* Cookserch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEA1A725EEEABF00C52870 /* Cookserch.swift */; };
-		07E5328E25D2640500D21F88 /* HomepageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5328D25D2640500D21F88 /* HomepageView.swift */; };
-		07F66F9B25F24E2B003F5491 /* FoodLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F66F9A25F24E2B003F5491 /* FoodLabel.swift */; };
-		07F66F9E25F25339003F5491 /* AddFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F66F9D25F25339003F5491 /* AddFood.swift */; };
 		07F66FA125F25DD3003F5491 /* Foodmessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F66FA025F25DD3003F5491 /* Foodmessage.swift */; };
+		094BE76825F74B700039FED7 /* OftenFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094BE76725F74B700039FED7 /* OftenFood.swift */; };
+		094BE76D25F74BEB0039FED7 /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = 094BE76C25F74BEB0039FED7 /* Neumorphic */; };
+		094BE77125F74C3A0039FED7 /* FoodLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094BE77025F74C3A0039FED7 /* FoodLabel.swift */; };
+		094BE77525F74C470039FED7 /* AddFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094BE77425F74C470039FED7 /* AddFood.swift */; };
+		094BE77925F74C9A0039FED7 /* HomepageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094BE77825F74C9A0039FED7 /* HomepageView.swift */; };
 		30145FAC25CB99680063D2D1 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30145FAB25CB99680063D2D1 /* TopBarView.swift */; };
 		30145FB025CB9AD30063D2D1 /* TimeAndWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30145FAF25CB9AD30063D2D1 /* TimeAndWeatherView.swift */; };
 		30B193B425BFC0D60030E782 /* Intelligent_refrigeratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B193B325BFC0D60030E782 /* Intelligent_refrigeratorApp.swift */; };
@@ -45,7 +46,6 @@
 		07144B6725F10C7200C7AD42 /* NumberPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPhone.swift; sourceTree = "<group>"; };
 		07144B6B25F10F9E00C7AD42 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		07144B6E25F1149300C7AD42 /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
-		07144B7825F127B100C7AD42 /* OftenFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OftenFood.swift; sourceTree = "<group>"; };
 		071DCF5425ED8D690061CAD2 /* CookBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBook.swift; sourceTree = "<group>"; };
 		071DCF5825ED90350061CAD2 /* CookBookData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookData.swift; sourceTree = "<group>"; };
 		071DCF5C25ED9CA00061CAD2 /* QuickerCook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickerCook.swift; sourceTree = "<group>"; };
@@ -55,10 +55,11 @@
 		07A71CFD25F0428C002D57B1 /* Thermostat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thermostat.swift; sourceTree = "<group>"; };
 		07BEA1A425EEE49C00C52870 /* CoolVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolVideo.swift; sourceTree = "<group>"; };
 		07BEA1A725EEEABF00C52870 /* Cookserch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cookserch.swift; sourceTree = "<group>"; };
-		07E5328D25D2640500D21F88 /* HomepageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageView.swift; sourceTree = "<group>"; };
-		07F66F9A25F24E2B003F5491 /* FoodLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodLabel.swift; sourceTree = "<group>"; };
-		07F66F9D25F25339003F5491 /* AddFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFood.swift; sourceTree = "<group>"; };
 		07F66FA025F25DD3003F5491 /* Foodmessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foodmessage.swift; sourceTree = "<group>"; };
+		094BE76725F74B700039FED7 /* OftenFood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OftenFood.swift; path = "../../../../../Desktop/比赛/Intelligent-refrigerator/Intelligent refrigerator/View/Food/OftenFood.swift"; sourceTree = "<group>"; };
+		094BE77025F74C3A0039FED7 /* FoodLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodLabel.swift; path = "../../../../../Desktop/比赛/Intelligent-refrigerator/Intelligent refrigerator/View/Food/FoodLabel.swift"; sourceTree = "<group>"; };
+		094BE77425F74C470039FED7 /* AddFood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddFood.swift; path = "../../../../../Desktop/比赛/Intelligent-refrigerator/Intelligent refrigerator/View/Food/AddFood.swift"; sourceTree = "<group>"; };
+		094BE77825F74C9A0039FED7 /* HomepageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomepageView.swift; path = "../../../../../Desktop/比赛/Intelligent-refrigerator/Intelligent refrigerator/View/HomeView/HomepageView.swift"; sourceTree = "<group>"; };
 		30145FAB25CB99680063D2D1 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		30145FAF25CB9AD30063D2D1 /* TimeAndWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAndWeatherView.swift; sourceTree = "<group>"; };
 		30B193B025BFC0D60030E782 /* Intelligent refrigerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Intelligent refrigerator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +81,7 @@
 			files = (
 				30CC939725F6204600F04483 /* SwiftSpeech in Frameworks */,
 				30C7BF7B25F5D9E200F1E39F /* SwiftUICharts in Frameworks */,
+				094BE76D25F74BEB0039FED7 /* Neumorphic in Frameworks */,
 				30C7BF7725F5D56E00F1E39F /* SwiftyJSON in Frameworks */,
 				30C7BF7325F5D51400F1E39F /* Alamofire in Frameworks */,
 				30C7BF7F25F5DA7400F1E39F /* SwiftUIX in Frameworks */,
@@ -112,9 +114,9 @@
 		07144B7725F1272F00C7AD42 /* Food */ = {
 			isa = PBXGroup;
 			children = (
-				07144B7825F127B100C7AD42 /* OftenFood.swift */,
-				07F66F9A25F24E2B003F5491 /* FoodLabel.swift */,
-				07F66F9D25F25339003F5491 /* AddFood.swift */,
+				094BE76725F74B700039FED7 /* OftenFood.swift */,
+				094BE77025F74C3A0039FED7 /* FoodLabel.swift */,
+				094BE77425F74C470039FED7 /* AddFood.swift */,
 				07F66FA025F25DD3003F5491 /* Foodmessage.swift */,
 			);
 			path = Food;
@@ -131,7 +133,7 @@
 		07E5328C25D2626F00D21F88 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
-				07E5328D25D2640500D21F88 /* HomepageView.swift */,
+				094BE77825F74C9A0039FED7 /* HomepageView.swift */,
 				071DCF5425ED8D690061CAD2 /* CookBook.swift */,
 				071DCF5C25ED9CA00061CAD2 /* QuickerCook.swift */,
 				07BEA1A425EEE49C00C52870 /* CoolVideo.swift */,
@@ -242,6 +244,7 @@
 				30C7BF7A25F5D9E200F1E39F /* SwiftUICharts */,
 				30C7BF7E25F5DA7400F1E39F /* SwiftUIX */,
 				30CC939625F6204600F04483 /* SwiftSpeech */,
+				094BE76C25F74BEB0039FED7 /* Neumorphic */,
 			);
 			productName = "Intelligent refrigerator";
 			productReference = 30B193B025BFC0D60030E782 /* Intelligent refrigerator.app */;
@@ -276,6 +279,7 @@
 				30C7BF7925F5D9E200F1E39F /* XCRemoteSwiftPackageReference "ChartView" */,
 				30C7BF7D25F5DA7400F1E39F /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 				30CC939525F6204600F04483 /* XCRemoteSwiftPackageReference "SwiftSpeech" */,
+				094BE76B25F74BEB0039FED7 /* XCRemoteSwiftPackageReference "neumorphic" */,
 			);
 			productRefGroup = 30B193B125BFC0D60030E782 /* Products */;
 			projectDirPath = "";
@@ -305,6 +309,7 @@
 			files = (
 				30B193BD25BFC0D70030E782 /* Persistence.swift in Sources */,
 				07F66FA125F25DD3003F5491 /* Foodmessage.swift in Sources */,
+				094BE77925F74C9A0039FED7 /* HomepageView.swift in Sources */,
 				07BEA1A825EEEABF00C52870 /* Cookserch.swift in Sources */,
 				07144B6825F10C7200C7AD42 /* NumberPhone.swift in Sources */,
 				30145FAC25CB99680063D2D1 /* TopBarView.swift in Sources */,
@@ -312,19 +317,18 @@
 				30145FB025CB9AD30063D2D1 /* TimeAndWeatherView.swift in Sources */,
 				30B193B625BFC0D60030E782 /* ContentView.swift in Sources */,
 				07144B6C25F10F9E00C7AD42 /* Answer.swift in Sources */,
+				094BE77525F74C470039FED7 /* AddFood.swift in Sources */,
 				071DCF5925ED90350061CAD2 /* CookBookData.swift in Sources */,
 				30B193B425BFC0D60030E782 /* Intelligent_refrigeratorApp.swift in Sources */,
 				07A71CF825F036F2002D57B1 /* Doorbelled.swift in Sources */,
-				07E5328E25D2640500D21F88 /* HomepageView.swift in Sources */,
 				30CC939B25F6209700F04483 /* SpeechView.swift in Sources */,
-				07144B7925F127B100C7AD42 /* OftenFood.swift in Sources */,
-				07F66F9B25F24E2B003F5491 /* FoodLabel.swift in Sources */,
+				094BE77125F74C3A0039FED7 /* FoodLabel.swift in Sources */,
 				07BEA1A525EEE49C00C52870 /* CoolVideo.swift in Sources */,
 				30B193C025BFC0D70030E782 /* Intelligent_refrigerator.xcdatamodeld in Sources */,
+				094BE76825F74B700039FED7 /* OftenFood.swift in Sources */,
 				07A71CF525F0343B002D57B1 /* Doorbell.swift in Sources */,
 				071DCF5D25ED9CA00061CAD2 /* QuickerCook.swift in Sources */,
 				07A71CFE25F0428C002D57B1 /* Thermostat.swift in Sources */,
-				07F66F9E25F25339003F5491 /* AddFood.swift in Sources */,
 				07144B6F25F1149300C7AD42 /* Call.swift in Sources */,
 				071DCF5525ED8D690061CAD2 /* CookBook.swift in Sources */,
 				30C7BF6F25F5D31500F1E39F /* WeatherAndLocation.swift in Sources */,
@@ -518,6 +522,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		094BE76B25F74BEB0039FED7 /* XCRemoteSwiftPackageReference "neumorphic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/costachung/neumorphic/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.5;
+			};
+		};
 		30C7BF7125F5D51400F1E39F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -561,6 +573,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		094BE76C25F74BEB0039FED7 /* Neumorphic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 094BE76B25F74BEB0039FED7 /* XCRemoteSwiftPackageReference "neumorphic" */;
+			productName = Neumorphic;
+		};
 		30C7BF7225F5D51400F1E39F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 30C7BF7125F5D51400F1E39F /* XCRemoteSwiftPackageReference "Alamofire" */;
