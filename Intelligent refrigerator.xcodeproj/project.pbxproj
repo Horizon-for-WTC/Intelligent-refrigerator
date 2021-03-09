@@ -115,8 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				094BE77B25F750DB0039FED7 /* OftenFood.swift */,
-				094BE77F25F7510B0039FED7 /* FoodLable.swift */,
 				094BE78325F7513C0039FED7 /* AddFood.swift */,
+				094BE77F25F7510B0039FED7 /* FoodLable.swift */,
 				094BE78725F751650039FED7 /* Foodmessage.swift */,
 			);
 			path = Food;

@@ -3,37 +3,40 @@
 //  Intelligent refrigerator
 //
 //  Created by cjj on 2021/3/4.
-//
+//phone.down.fill phone.fill mic.fill
 
 import SwiftUI
 
 struct Doorbell: View {
-//    var arr=[]
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
             VStack {
                 ZStack {
                     HStack {
+                        Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }, label: {
                         Image(systemName: "house")
                             .imageScale(.large)
+                    })
                         Spacer()
                     }
-                    Text("门铃")
+                    Text("智能门铃")
                         .font(.title2)
                 }
-                .foregroundColor(.white)
+                .foregroundColor(.gray)
                 .padding(.horizontal)
                     VStack{
                         Spacer()
                         Text("有人在按门铃,等待接听...")
-                            .foregroundColor(.white)
+                            .foregroundColor(.gray)
                         Image("cc")
                             .resizable()
                             .frame(width: 120, height: 120)
                             .aspectRatio(contentMode: .fill)
                             .clipShape(Circle())
                         Spacer()
-                        HStack(spacing: 30.0){
+                        HStack(spacing: 100.0){
                             ForEach(0..<3, id: \.self) { value  in
                                 CircleButton()
                             }
@@ -41,27 +44,27 @@ struct Doorbell: View {
                         .padding(.bottom, 30.0)
                     }
             }
-            .background(Color.gray.ignoresSafeArea())
+            .background(Color.Neumorphic.main.ignoresSafeArea())
             .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                Image(systemName: "")
-        }))  
     }
 }
 
 struct CircleButton:View {
-    var image="phone.down.circle.fill"
+    var image="mic.fill"
     var title="接听"
-    var size:CGFloat=100
+    var size:CGFloat=60
     var body: some View{
-        VStack {
-            Image(systemName: image)
-                .aspectRatio(contentMode: .fit)
-                .font(.system(size: 60))
-                
-               
-                .clipShape(Circle())
-            Text(title)
+        VStack(alignment: .center) {
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    VStack {
+                        Image(systemName: image)
+                            .aspectRatio(contentMode: .fit)
+                            .font(.system(size: size))
+                            .clipShape(Circle())
+                            .foregroundColor(Color.white.opacity(0.4))
+                    }
+            }).softButtonStyle(Circle())
+            Text(title).foregroundColor(.gray)
         }
     }
 }

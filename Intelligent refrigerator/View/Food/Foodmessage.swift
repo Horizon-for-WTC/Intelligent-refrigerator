@@ -9,21 +9,31 @@ import SwiftUI
 
 struct Foodmessage: View {
     @Environment(\.presentationMode) var presentationMode
+    @Binding var isshow:Bool
     var body: some View {
-        VStack {
+        ZStack {
+            Color.Neumorphic.main.ignoresSafeArea().onTapGesture {
+                self.presentationMode.wrappedValue.dismiss()
+                self.isshow.toggle()
+                
+            }
             ZStack{
                 RoundedRectangle(cornerRadius: 25.0)
-                    .fill(Color.white)
+                    .fill(Color.Neumorphic.main)
+                    .softOuterShadow()
                     .frame(width: UIScreen.main.bounds.width-50, height: UIScreen.main.bounds.height/2.5, alignment: .center)
                 VStack(spacing: 15.0){
                     HStack {
-                        Image(systemName: "chevron.left").offset(CGSize(width: 0.0, height: 30.0))
+                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                            Image(systemName: "chevron.left").font(.title)
+                        }).softButtonStyle(Circle())
+                       
                         Image("perch")
                             .resizable()
                             .frame(width: 200, height: 200, alignment: .center)
-                            
-                        Image(systemName: "chevron.right")
-                            .offset(CGSize(width: 0.0, height: 30.0))
+                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                            Image(systemName: "chevron.right").font(.title)
+                        }).softButtonStyle(Circle())
                     }.offset(CGSize(width: 0, height: -50))
                         Text("西红柿")
                             .font(.largeTitle)
@@ -35,15 +45,14 @@ struct Foodmessage: View {
                         Text("推荐舱室  冷藏室")
                     }.font(.title2)
                     .padding(.bottom, 100.0)
-                   
                 }
             }
-        }
+        }.navigationBarHidden(true).navigationBarBackButtonHidden(true)
     }
 }
 
 struct Foodmessage_Previews: PreviewProvider {
     static var previews: some View {
-        Foodmessage()
+        Foodmessage(isshow: FoodLabel().$isshow)
     }
 }

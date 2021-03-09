@@ -26,6 +26,8 @@ struct HomepageView: View
     @State var isplay=false // 音乐是否播放
     @State var isstr=0 // 判断留言数量是否为空
     @State var navtoFood=false // 跳转到食物
+    @State var navtoFoodmessage=false //跳转到食物信息
+    @Binding var isshowFoodLable:Bool
     var foods=["西红柿", "生菜", "火龙果"] // 过期或临期食物数组     内容为过期时间最长的三个
     var body: some View
     {
@@ -257,26 +259,34 @@ struct HomepageView: View
                             // 最近过期食物
                             ForEach(foods, id: \.self)
                             { item in
-                                HStack
-                                {
-                                    Image("perch") // 食物图片
-                                        .resizable()
-                                        .aspectRatio(1, contentMode: .fit)
-                                        .frame(width: 80, height: 80, alignment: .center)
-                                        .clipShape(Circle())
-                                    VStack(alignment: .leading, spacing: 6.0)
-                                    {
-                                        Text(item) // 食物名称
-                                            .font(.title)
-                                        HStack
-                                        {
-                                            Image(systemName: "exclamationmark.triangle")
-                                            Text("距离过期1天") // 食物状态
-                                                .font(.system(size: 18))
+                                NavigationLink(
+                                    destination: Foodmessage(isshow: $isshowFoodLable),
+                                    isActive: $navtoFoodmessage,
+                                    label: {
+                                        Group {
+                                            HStack
+                                            {
+                                                Image("perch") // 食物图片
+                                                    .resizable()
+                                                    .aspectRatio(1, contentMode: .fit)
+                                                    .frame(width: 80, height: 80, alignment: .center)
+                                                    .clipShape(Circle())
+                                                VStack(alignment: .leading, spacing: 6.0)
+                                                {
+                                                    Text(item) // 食物名称
+                                                        .font(.title)
+                                                    HStack
+                                                    {
+                                                        Image(systemName: "exclamationmark.triangle")
+                                                        Text("距离过期1天") // 食物状态
+                                                            .font(.system(size: 18))
+                                                    }
+                                                }
+                                            }
+                                            .padding(.vertical)
                                         }
-                                    }
-                                }
-                                .padding(.vertical)
+                                    })
+                               
                             }
                             Spacer()
                         }
@@ -349,6 +359,6 @@ struct HomepageView_Previews: PreviewProvider
 {
     static var previews: some View
     {
-        HomepageView()
+        HomepageView(isshowFoodLable: FoodLabel().$isshow)
     }
 }
