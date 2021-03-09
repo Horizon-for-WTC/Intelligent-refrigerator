@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Doorbellmessage: View {
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack(alignment: .leading, spacing: 20.0){
             Text("语音回复")

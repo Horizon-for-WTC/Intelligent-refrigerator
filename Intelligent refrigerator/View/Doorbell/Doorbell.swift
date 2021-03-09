@@ -9,14 +9,24 @@ import SwiftUI
 
 struct Doorbell: View {
 //    var arr=[]
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
-        NavigationView {
             VStack {
                 ZStack {
-                    Color.gray.ignoresSafeArea()
+                    HStack {
+                        Image(systemName: "house")
+                            .imageScale(.large)
+                        Spacer()
+                    }
+                    Text("门铃")
+                        .font(.title2)
+                }
+                .foregroundColor(.white)
+                .padding(.horizontal)
                     VStack{
                         Spacer()
                         Text("有人在按门铃,等待接听...")
+                            .foregroundColor(.white)
                         Image("cc")
                             .resizable()
                             .frame(width: 120, height: 120)
@@ -30,16 +40,12 @@ struct Doorbell: View {
                         }
                         .padding(.bottom, 30.0)
                     }
-                }
-                
             }
-            .navigationBarTitle(Text("智能门铃"), displayMode: .inline)
+            .background(Color.gray.ignoresSafeArea())
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                 Image(systemName: "")
-        }))
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
+        }))  
     }
 }
 

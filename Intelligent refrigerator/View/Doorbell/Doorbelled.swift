@@ -10,11 +10,21 @@ import SwiftUI
 struct Doorbelled: View {
 //    var arr=[]
     @State var isshowmessage=false
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
-        NavigationView {
             ZStack {
-                VStack(spacing: 0.0) {
-                           
+                VStack{
+                    ZStack {
+                        HStack {
+                            Image(systemName: "house")
+                                .imageScale(.large)
+                            Spacer()
+                        }
+                        Text("实时画面")
+                            .font(.title2)
+                    }
+                    .foregroundColor(.white)
+                    .padding(.horizontal)
                     ZStack(alignment: .top){
                         Image("perch")
                             .frame(width: UIScreen.main.bounds.width, height: 800)
@@ -48,9 +58,7 @@ struct Doorbelled: View {
                 if isshowmessage{
                     Doorbellmessage()
                 }
-            }
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
+            }.background(Color.gray.ignoresSafeArea())
     }
 }
 

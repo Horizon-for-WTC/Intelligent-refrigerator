@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Call: View {
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack(spacing: 20.0) {
             ZStack {
@@ -16,10 +17,12 @@ struct Call: View {
                         .imageScale(.large)
                     Spacer()
                 }
-                .padding()
+                
                 Text("正在呼叫...")
                     .font(.title2)
             }
+            .foregroundColor(.white)
+            .padding(.horizontal)
             Spacer()
             VStack(spacing: 8.0) {
                 Image("cc")
@@ -28,22 +31,21 @@ struct Call: View {
                     .aspectRatio(contentMode: .fill)
                     .clipShape(Circle())
                 Text("176 8377 0064")
-                    .foregroundColor(.black)
                     .font(.title2)
                 Text("正在Wi-Fi通话，通话完全免费")
-            }
+            } .foregroundColor(.white)
             Spacer()  
             HStack(alignment: .center, spacing: 60.0){
                 Spacer()
-                CircleButton(image: "phone.down.circle.fill", title: "静音", size: 80)
-                CircleButton(image: "phone.circle.fill", title: "键盘", size: 80)
-                CircleButton(image: "phone.circle.fill", title: "免提", size: 80)
+                CircleButton(image: "mic.slash", title: "静音", size: 80)
+                CircleButton(image: "keyboard", title: "键盘", size: 80)
+                CircleButton(image: "speaker.wave.2.circle", title: "免提", size: 80)
                 Spacer()
             }
-            CircleButton(image: "phone.circle.fill", title: "挂断", size: 80)
+            CircleButton(image: "phone.circle.fill", title: "挂断", size: 80).padding(.vertical,30)
             Spacer()
         }
-        
+       
         .background(Color.gray.ignoresSafeArea())
     }
 }

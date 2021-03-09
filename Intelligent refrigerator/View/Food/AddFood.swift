@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddFood: View {
     @State var num=0
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 18)

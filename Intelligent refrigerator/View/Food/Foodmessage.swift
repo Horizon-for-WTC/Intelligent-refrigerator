@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Foodmessage: View {
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack {
             ZStack{
