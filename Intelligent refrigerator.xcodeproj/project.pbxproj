@@ -37,7 +37,8 @@
 		30C7BF7725F5D56E00F1E39F /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 30C7BF7625F5D56E00F1E39F /* SwiftyJSON */; };
 		30C7BF7B25F5D9E200F1E39F /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 30C7BF7A25F5D9E200F1E39F /* SwiftUICharts */; };
 		30C7BF7F25F5DA7400F1E39F /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 30C7BF7E25F5DA7400F1E39F /* SwiftUIX */; };
-		30C7BF8525F61AA900F1E39F /* SwiftSpeech in Frameworks */ = {isa = PBXBuildFile; productRef = 30C7BF8425F61AA900F1E39F /* SwiftSpeech */; };
+		30CC939725F6204600F04483 /* SwiftSpeech in Frameworks */ = {isa = PBXBuildFile; productRef = 30CC939625F6204600F04483 /* SwiftSpeech */; };
+		30CC939B25F6209700F04483 /* SpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CC939A25F6209700F04483 /* SpeechView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		30B193BF25BFC0D70030E782 /* Intelligent_refrigerator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Intelligent_refrigerator.xcdatamodel; sourceTree = "<group>"; };
 		30B193C125BFC0D70030E782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30C7BF6E25F5D31500F1E39F /* WeatherAndLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAndLocation.swift; sourceTree = "<group>"; };
+		30CC939A25F6209700F04483 /* SpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30C7BF8525F61AA900F1E39F /* SwiftSpeech in Frameworks */,
+				30CC939725F6204600F04483 /* SwiftSpeech in Frameworks */,
 				30C7BF7B25F5D9E200F1E39F /* SwiftUICharts in Frameworks */,
 				30C7BF7725F5D56E00F1E39F /* SwiftyJSON in Frameworks */,
 				30C7BF7325F5D51400F1E39F /* Alamofire in Frameworks */,
@@ -159,6 +161,7 @@
 		304158A125BFCE16000AAFE6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				30CE063F25F61C8000F4F87B /* Speech */,
 				07144B7725F1272F00C7AD42 /* Food */,
 				07144B6625F10C3F00C7AD42 /* CallPhone */,
 				07144B7325F1234D00C7AD42 /* Doorbell */,
@@ -209,6 +212,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		30CE063F25F61C8000F4F87B /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				30CC939A25F6209700F04483 /* SpeechView.swift */,
+			);
+			path = Speech;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,7 +241,7 @@
 				30C7BF7625F5D56E00F1E39F /* SwiftyJSON */,
 				30C7BF7A25F5D9E200F1E39F /* SwiftUICharts */,
 				30C7BF7E25F5DA7400F1E39F /* SwiftUIX */,
-				30C7BF8425F61AA900F1E39F /* SwiftSpeech */,
+				30CC939625F6204600F04483 /* SwiftSpeech */,
 			);
 			productName = "Intelligent refrigerator";
 			productReference = 30B193B025BFC0D60030E782 /* Intelligent refrigerator.app */;
@@ -264,7 +275,7 @@
 				30C7BF7525F5D56E00F1E39F /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				30C7BF7925F5D9E200F1E39F /* XCRemoteSwiftPackageReference "ChartView" */,
 				30C7BF7D25F5DA7400F1E39F /* XCRemoteSwiftPackageReference "SwiftUIX" */,
-				30C7BF8325F61AA900F1E39F /* XCRemoteSwiftPackageReference "SwiftSpeech" */,
+				30CC939525F6204600F04483 /* XCRemoteSwiftPackageReference "SwiftSpeech" */,
 			);
 			productRefGroup = 30B193B125BFC0D60030E782 /* Products */;
 			projectDirPath = "";
@@ -305,6 +316,7 @@
 				30B193B425BFC0D60030E782 /* Intelligent_refrigeratorApp.swift in Sources */,
 				07A71CF825F036F2002D57B1 /* Doorbelled.swift in Sources */,
 				07E5328E25D2640500D21F88 /* HomepageView.swift in Sources */,
+				30CC939B25F6209700F04483 /* SpeechView.swift in Sources */,
 				07144B7925F127B100C7AD42 /* OftenFood.swift in Sources */,
 				07F66F9B25F24E2B003F5491 /* FoodLabel.swift in Sources */,
 				07BEA1A525EEE49C00C52870 /* CoolVideo.swift in Sources */,
@@ -538,7 +550,7 @@
 				minimumVersion = 0.0.5;
 			};
 		};
-		30C7BF8325F61AA900F1E39F /* XCRemoteSwiftPackageReference "SwiftSpeech" */ = {
+		30CC939525F6204600F04483 /* XCRemoteSwiftPackageReference "SwiftSpeech" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Cay-Zhang/SwiftSpeech.git";
 			requirement = {
@@ -569,9 +581,9 @@
 			package = 30C7BF7D25F5DA7400F1E39F /* XCRemoteSwiftPackageReference "SwiftUIX" */;
 			productName = SwiftUIX;
 		};
-		30C7BF8425F61AA900F1E39F /* SwiftSpeech */ = {
+		30CC939625F6204600F04483 /* SwiftSpeech */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 30C7BF8325F61AA900F1E39F /* XCRemoteSwiftPackageReference "SwiftSpeech" */;
+			package = 30CC939525F6204600F04483 /* XCRemoteSwiftPackageReference "SwiftSpeech" */;
 			productName = SwiftSpeech;
 		};
 /* End XCSwiftPackageProductDependency section */
