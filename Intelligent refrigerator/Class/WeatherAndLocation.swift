@@ -3,7 +3,7 @@
 //  Intelligent refrigerator
 //
 //  Created by RemiliaScarlet on 2021/3/8.
-//测试一下。。。。
+//测试一下。。。。lkj
 
 import Foundation
 import CoreLocation
