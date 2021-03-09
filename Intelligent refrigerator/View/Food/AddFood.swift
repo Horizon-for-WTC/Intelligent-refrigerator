@@ -2,18 +2,19 @@
 //  AddFood.swift
 //  Intelligent refrigerator
 //
-//  Created by cjj on 2021/3/5.
+//  Created by 陈佳俊 on 2021/3/9.
 //
 
 import SwiftUI
-
+import Neumorphic
 struct AddFood: View {
     @State var num=0
+    @Binding var isshow:Bool
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 18)
-                .fill(Color.white)
+                .fill(Color.Neumorphic.main)
                 .frame(width: UIScreen.main.bounds.width-50, height: UIScreen.main.bounds.height/2.2, alignment: .center)
             VStack(spacing: 20.0) {
                 Text("请确定添加的食材")
@@ -35,20 +36,28 @@ struct AddFood: View {
                         Text("\(num)").padding(.horizontal, 90)
                     }
                 }
-                HStack(spacing: 30.0){
-                    Text("一周").padding().font(.title).border(Color.black, width: 2)
-                    Text("一个月").padding().font(.title).border(Color.black, width: 2)
-                    Text("两个月").padding().font(.title).border(Color.black, width: 2)
-                    Text("三个月").padding().font(.title).border(Color.black, width: 2)
-                    Text("半年").padding().font(.title).border(Color.black, width: 2)
+                HStack(spacing: 10.0){
+                    CJJNeumorphicBut(width: (UIScreen.main.bounds.width-50)/5, height: 80, str: "一周")
+                    CJJNeumorphicBut(width: (UIScreen.main.bounds.width-50)/5, height: 80, str: "一个月")
+                    CJJNeumorphicBut(width: (UIScreen.main.bounds.width-50)/5, height: 80, str: "两个月")
+                    CJJNeumorphicBut(width: (UIScreen.main.bounds.width-50)/5, height: 80, str: "三个月")
+                    CJJNeumorphicBut(width: (UIScreen.main.bounds.width-50)/5, height: 80, str: "半年")
                 }
                 .padding(.horizontal)
                 HStack{
-                    
-                    Text("取消")
-                        .padding(.horizontal,120)
-                    Text("确定")
-                        .padding(.horizontal,120)
+                    Button(action: {
+                        self.isshow.toggle()
+                    }, label: {
+                        Text("取消")
+                                .padding(.horizontal,100)
+                    }).softButtonStyle(Rectangle())
+                    Button(action: {
+                        self.isshow.toggle()
+                    }, label: {
+                         Text("确定")
+                            .padding(.horizontal,100)
+                    }).softButtonStyle(Rectangle())
+                   
                 }
                 .font(.title)
                 .padding()
@@ -57,8 +66,19 @@ struct AddFood: View {
     }
 }
 
+struct CJJNeumorphicBut:View {
+    var width:CGFloat
+    var height:CGFloat
+    var str:String
+    var body: some View{
+        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Text("\(str)").font(.title).padding(5.0)
+        }).softButtonStyle(RoundedRectangle(cornerRadius: 10)).frame(max: CGSize(width: width, height: height))
+    }
+}
+
 struct AddFood_Previews: PreviewProvider {
     static var previews: some View {
-        AddFood()
+        AddFood(isshow: OftenFood().$isshowAdd)
     }
 }
