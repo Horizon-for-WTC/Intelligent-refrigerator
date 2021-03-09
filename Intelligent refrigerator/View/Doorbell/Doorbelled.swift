@@ -3,7 +3,7 @@
 //  Intelligent refrigerator
 //
 //  Created by cjj on 2021/3/4.
-//
+//video.fill   phone.down.fill     camera
 
 import SwiftUI
 
@@ -16,14 +16,18 @@ struct Doorbelled: View {
                 VStack{
                     ZStack {
                         HStack {
+                            Button(action: {
+                            presentationMode.wrappedValue.dismiss()
+                        }, label: {
                             Image(systemName: "house")
                                 .imageScale(.large)
+                        })
                             Spacer()
                         }
                         Text("实时画面")
                             .font(.title2)
                     }
-                    .foregroundColor(.white)
+                    .foregroundColor(.gray)
                     .padding(.horizontal)
                     ZStack(alignment: .top){
                         Image("perch")
@@ -38,16 +42,16 @@ struct Doorbelled: View {
                     }
                     Spacer()
                     ZStack {
-                        Color.gray.ignoresSafeArea(.all)
-                        HStack(spacing: 30.0){
-                                    ForEach(0..<3, id: \.self) { value  in
-                                        CircleButton()
-                                    }
+                        HStack(spacing: 100.0){
+//                                    ForEach(0..<3, id: \.self) { value  in
+//                                        CircleButton()
+//                                    }
+                            CircleButton(image: "video.fill", title: "录制", size: 60)
+                            CircleButton(image: "phone.down.fill", title: "挂断", size: 60)
+                            CircleButton(image: "camera", title: "拍摄", size: 60)
                                 }
-                        .padding(.bottom, 30.0)
+                        .padding(.bottom, 60.0)
                     }
-                    .padding(.top, -10)
-       
                 }
                 .blur(radius: isshowmessage ? 5 : 0)
                 .navigationBarTitle(Text("智能门铃"), displayMode: .inline)
@@ -58,7 +62,7 @@ struct Doorbelled: View {
                 if isshowmessage{
                     Doorbellmessage()
                 }
-            }.background(Color.gray.ignoresSafeArea())
+            }.background(Color.Neumorphic.main.ignoresSafeArea())
     }
 }
 

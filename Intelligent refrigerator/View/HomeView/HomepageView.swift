@@ -27,6 +27,7 @@ struct HomepageView: View
     @State var isstr=0 // 判断留言数量是否为空
     @State var navtoFood=false // 跳转到食物
     @State var navtoFoodmessage=false //跳转到食物信息
+    @State var navtoDoorbell=false
     @Binding var isshowFoodLable:Bool
     var foods=["西红柿", "生菜", "火龙果"] // 过期或临期食物数组     内容为过期时间最长的三个
     var body: some View
@@ -312,17 +313,25 @@ struct HomepageView: View
                                     }
                                 })
                                 // 门铃
-                                Button(action: {}, label: {
-                                    VStack
-                                    {
-                                        Image("perch")
-                                            .resizable()
-                                            .aspectRatio(1, contentMode: .fit)
-                                            .frame(width: 60, height: 60)
-                                            .clipShape(RoundedRectangle(cornerRadius: 10.0))
-                                        Text("门铃")
-                                    }
-                                })
+                                NavigationLink(
+                                    destination: Doorbell(),
+                                    isActive: $navtoDoorbell,
+                                    label: {
+                                        Button(action: {
+                                            self.navtoDoorbell=true
+                                        }, label: {
+                                            VStack
+                                            {
+                                                Image("perch")
+                                                    .resizable()
+                                                    .aspectRatio(1, contentMode: .fit)
+                                                    .frame(width: 60, height: 60)
+                                                    .clipShape(RoundedRectangle(cornerRadius: 10.0))
+                                                Text("门铃")
+                                            }
+                                        })
+                                    })
+                                
                                 // 电话
                                 Button(action: {}, label: {
                                     VStack

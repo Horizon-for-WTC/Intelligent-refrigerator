@@ -46,6 +46,7 @@ struct Doorbell: View {
             }
             .background(Color.Neumorphic.main.ignoresSafeArea())
             .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
     }
 }
 
@@ -59,10 +60,10 @@ struct CircleButton:View {
                     VStack {
                         Image(systemName: image)
                             .aspectRatio(contentMode: .fit)
-                            .font(.system(size: size))
+                            .font(.system(size: 60))
                             .clipShape(Circle())
                             .foregroundColor(Color.white.opacity(0.4))
-                    }
+                    }.frame(width: size, height: size, alignment: .center)
             }).softButtonStyle(Circle())
             Text(title).foregroundColor(.gray)
         }
