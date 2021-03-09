@@ -18,9 +18,10 @@ struct AddFood: View {
                 .frame(width: UIScreen.main.bounds.width-50, height: UIScreen.main.bounds.height/2.2, alignment: .center)
             VStack(spacing: 20.0) {
                 Text("请确定添加的食材")
-                Rectangle()
+                RoundedRectangle(cornerRadius: 10)
                     .fill(Color.black.opacity(0.6))
-                    .frame(width: 80, height: 80, alignment: .center).clipShape(RoundedRectangle(cornerRadius: 10))
+                    .frame(width: 80, height: 80, alignment: .center)
+                    .softOuterShadow()
                 Text("火龙果")
                 Text("将于2020年10月26日过期")
                 Rectangle()
@@ -44,7 +45,7 @@ struct AddFood: View {
                     CJJNeumorphicBut(width: (UIScreen.main.bounds.width-50)/5, height: 80, str: "半年")
                 }
                 .padding(.horizontal)
-                HStack{
+                HStack(spacing: 30.0){
                     Button(action: {
                         self.isshow.toggle()
                     }, label: {
