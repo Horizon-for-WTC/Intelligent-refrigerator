@@ -23,8 +23,8 @@ struct OneDayView: View {
                 }
                 .padding(.horizontal)
                 HStack {
-                    LineChartView(data: [90,99,78,111,70,60,77], title: "最高温",form: ChartForm.extraLarge, dropShadow: false).padding(.horizontal)
-                    LineChartView(data: [90,99,78,111,70,60,77], title: "最低温",form: ChartForm.extraLarge, dropShadow: false).padding(.horizontal)
+                    LineChartView(data: [90,99,78,111,70,60,77], title: "",form: ChartForm.extraLarge, dropShadow: false).padding(.horizontal)
+                    
 
                 }
             }

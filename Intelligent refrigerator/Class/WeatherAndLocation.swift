@@ -137,7 +137,10 @@ class CaiYunJsonRealtime:LocationViewModel {
     }
 }
 
-class CaiYunJsonXXIV: ObservableObject {
+class CaiYunJsonXXIV: LocationViewModel {
     @Published var highTem = [Int]()
-    @Published var lowTem = [Int]()
+
+    
+    let cyToken = "HYzglwyB98oRNaYL"
+    var cyUrl: URL { URL(string: "https://api.caiyunapp.com/v2.5/\(cyToken)/\(userLongitude),\(userLatitude)/hourly.json")! }
 }
