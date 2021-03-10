@@ -136,3 +136,8 @@ class CaiYunJsonRealtime:LocationViewModel {
         }
     }
 }
+
+class CaiYunJsonXXIV: ObservableObject {
+    @Published var highTem = [Int]()
+    @Published var lowTem = [Int]()
+}
