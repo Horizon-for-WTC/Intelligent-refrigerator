@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>使用地理位置信息，阿巴阿巴阿巴阿巴</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>使用speech语音框架，阿巴阿巴阿巴阿巴</string>
