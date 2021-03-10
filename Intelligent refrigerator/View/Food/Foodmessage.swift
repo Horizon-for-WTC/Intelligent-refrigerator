@@ -53,6 +53,6 @@ struct Foodmessage: View {
 
 struct Foodmessage_Previews: PreviewProvider {
     static var previews: some View {
-        Foodmessage(isshow: FoodLabel().$isshow)
+        Foodmessage(isshow: FoodLabel().$isshow).preferredColorScheme(.dark)
     }
 }

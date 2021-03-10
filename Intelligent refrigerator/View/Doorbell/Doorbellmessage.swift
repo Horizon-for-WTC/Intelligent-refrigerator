@@ -57,6 +57,6 @@ struct Doorbellmessage: View {
 
 struct Doorbellmessage_Previews: PreviewProvider {
     static var previews: some View {
-        Doorbellmessage()
+        Doorbellmessage().preferredColorScheme(.dark)
     }
 }

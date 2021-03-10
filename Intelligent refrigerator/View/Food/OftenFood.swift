@@ -82,6 +82,6 @@ struct OftenFood: View {
 
 struct OftenFood_Previews: PreviewProvider {
     static var previews: some View {
-        OftenFood()
+        OftenFood().preferredColorScheme(.dark)
     }
 }

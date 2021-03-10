@@ -60,8 +60,7 @@ struct CircleButton:View {
                     VStack {
                         Image(systemName: image)
                             .aspectRatio(contentMode: .fit)
-                            .font(.system(size: 60))
-                            .clipShape(Circle())
+                            .font(.system(size: 48))
                             .foregroundColor(Color.white.opacity(0.4))
                     }.frame(width: size, height: size, alignment: .center)
             }).softButtonStyle(Circle())
@@ -72,6 +71,6 @@ struct CircleButton:View {
 
 struct Doorbell_Previews: PreviewProvider {
     static var previews: some View {
-        Doorbell()
+        Doorbell().preferredColorScheme(.dark)
     }
 }

@@ -13,11 +13,12 @@ struct AddFood: View {
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         ZStack {
-            
-            RoundedRectangle(cornerRadius: 18)
-                .fill(Color.Neumorphic.main)
-                .softOuterShadow()
-                .frame(width: UIScreen.main.bounds.width-50, height: UIScreen.main.bounds.height/2.2, alignment: .center)
+            Color.Neumorphic.main
+           
+                RoundedRectangle(cornerRadius: 18)
+                    .fill(Color.Neumorphic.main)
+                    .softOuterShadow()
+                    .frame(width: UIScreen.main.bounds.width-50, height: UIScreen.main.bounds.height/2.2, alignment: .center)
             VStack(spacing: 20.0) {
                 Text("请确定添加的食材")
                 RoundedRectangle(cornerRadius: 10)
@@ -82,6 +83,6 @@ struct CJJNeumorphicBut:View {
 
 struct AddFood_Previews: PreviewProvider {
     static var previews: some View {
-        AddFood(isshow: OftenFood().$isshowAdd)
+        AddFood(isshow: OftenFood().$isshowAdd).preferredColorScheme(.dark)
     }
 }

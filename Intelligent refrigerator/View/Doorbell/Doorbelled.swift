@@ -68,6 +68,6 @@ struct Doorbelled: View {
 
 struct Doorbelled_Previews: PreviewProvider {
     static var previews: some View {
-        Doorbelled()
+        Doorbelled().preferredColorScheme(.dark)
     }
 }

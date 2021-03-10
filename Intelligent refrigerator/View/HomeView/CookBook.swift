@@ -6,7 +6,7 @@
 // foreach 便利数据元
 
 import SwiftUI
-
+import SwiftUIX
 struct CookBook: View {
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
@@ -19,25 +19,34 @@ struct CookBook: View {
                 }
                 Text("菜谱")
                     .font(.title2)
-            }.foregroundColor(.white)
+            }.foregroundColor(.gray)
             .padding(.horizontal)
             ScrollView(.vertical, showsIndicators: false){
                     VStack(spacing: 20.0) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 25.0)
-                                .fill(Color.black.opacity(0.1))
+                                .fill(Color.Neumorphic.main)
+                                .softOuterShadow()
                                 .frame(width: UIScreen.main.bounds.width-30, height: 40, alignment: .center)
                             HStack{
                                 Image(systemName: "magnifyingglass").foregroundColor(.white)
                                 Text("请输入食材").foregroundColor(.gray)
                                 Spacer()
                             }
-                            .padding(.horizontal,30)
+                            .padding(.all,30)
                         }
-                        Circlestyle()
+                        ScrollView(.horizontal, showsIndicators: false){
+                        HStack {
+                            ForEach(0..<10, id: \.self) { _ in
+                                CookCircleButton(image: "cc", title: "鱼香肉丝", size: 60)
+                            }
+                        }
+                        }
+                        
                         BanderCook()
-                        BanderCook(title: "收藏菜谱", size: 150)
-                        BanderCook(title: "热门菜谱", size: 150 )
+                        BanderCook(title: "收藏菜谱",sizebig: 150,sizesmall: 60)
+                        BanderCook(title: "热门菜谱",sizebig: 150,sizesmall: 60)
+                       
                     }
                 }
                 .navigationBarTitle(Text("菜谱"), displayMode: .inline)
@@ -45,39 +54,36 @@ struct CookBook: View {
                     Image(systemName: "")
                         .imageScale(.large)
             }))
-        }.background(Color.gray.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/))
+        }.background(Color.Neumorphic.main.ignoresSafeArea())
     }
 }
 
-struct Circlestyle:View {
-    var image="cc"
+struct CookCircleButton:View {
+    var image="mic.fill"
+    var title="接听"
+    var size:CGFloat=60
     var body: some View{
-        VStack{
-            ScrollView(.horizontal, showsIndicators:false) {
-                HStack(spacing: 10.0) {
-                    ForEach(0..<8, id: \.self) { value in
-                            VStack {
-                                Image("\(image)")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 100, height: 100)
-                                    .clipShape(Circle())
-                                Text("\(value)")
-                            }
-                    }
-                }
-            }
-          
+        VStack(alignment: .center) {
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    VStack {
+                        Image(image)
+                            .aspectRatio(contentMode: .fit)
+                            .font(.system(size: 60))
+                            .clipShape(Circle())
+                            .foregroundColor(Color.white.opacity(0.4))
+                    }.frame(width: size, height: size, alignment: .center)
+            }).softButtonStyle(Circle())
+            Text(title).foregroundColor(Color.gray)
         }
-        .padding(.horizontal)
     }
 }
 
 struct BanderCook:View{
-    var image="cc"
+    var image="perch"
     var icon=""
     var title="今日菜谱"
-    var size:CGFloat=250
+    var sizebig:CGFloat=250
+    var sizesmall:CGFloat=250
     var body: some View{
         VStack{
             HStack{
@@ -90,10 +96,17 @@ struct BanderCook:View{
             ScrollView(.horizontal, showsIndicators: false){
                 HStack {
                     ForEach(0..<5, id: \.self) { value in
-                        Image("\(image)")
-                            .resizable()
-                            .frame(width: size, height: size, alignment: .center)
-                            .aspectRatio(contentMode: .fill)
+                        ZStack {
+                            Rectangle()
+                                .fill(Color.Neumorphic.main)
+                                .frame(width: sizebig, height: sizebig, alignment: .center)
+                                .softOuterShadow()
+                            Image("\(image)")
+                                .resizable()
+                                .frame(width: sizesmall, height: sizesmall, alignment: .center)
+                                .aspectRatio(contentMode: .fill)
+                        }
+                            
                     }
                     .padding()
                 }
@@ -104,6 +117,6 @@ struct BanderCook:View{
 
 struct CookBook_Previews: PreviewProvider {
     static var previews: some View {
-        CookBook()
+        CookBook().preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
     }
 }

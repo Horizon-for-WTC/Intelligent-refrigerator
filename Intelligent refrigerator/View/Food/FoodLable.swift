@@ -77,7 +77,7 @@ struct CJJLable: View {
                 .frame(width: 150, height: 80, alignment: .center)
             Button(action: { self.isshow.toggle() }, label: {
                 Text("🍅西红柿").font(.title2)
-                    .foregroundColor(Color.black)
+                    .foregroundColor(Color("FontColor"))
             })
         }
     }
@@ -85,6 +85,6 @@ struct CJJLable: View {
 
 struct FoodLabel_Previews: PreviewProvider {
     static var previews: some View {
-        FoodLabel()
+        FoodLabel().preferredColorScheme(.dark)
     }
 }

@@ -8,11 +8,7 @@
 import SwiftUI
 
 
-struct Thermostat_Previews: PreviewProvider {
-    static var previews: some View {
-        Thermostat()
-    }
-}
+
 
 struct Thermostat:View {
     @Environment(\.presentationMode) var presentationMode
@@ -80,5 +76,11 @@ struct Thermostat:View {
                 }
             }
         }
+    }
+}
+
+struct Thermostat_Previews: PreviewProvider {
+    static var previews: some View {
+        Thermostat().preferredColorScheme(.dark)
     }
 }
