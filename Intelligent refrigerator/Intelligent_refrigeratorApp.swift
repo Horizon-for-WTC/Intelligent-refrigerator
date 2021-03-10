@@ -13,7 +13,7 @@ struct Intelligent_refrigeratorApp: App {
 
     var body: some Scene {
         WindowGroup {
-            SpeechView()
+            WeatherView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

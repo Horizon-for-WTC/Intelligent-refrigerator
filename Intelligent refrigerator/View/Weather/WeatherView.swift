@@ -31,6 +31,7 @@ struct WeatherView: View {
                 .padding()//顶部标签栏？？？是叫标签栏吧？？？
                 ScrollView{
                     MainCardView()
+                    OneDayView()
                 }
             }
         }

@@ -9,7 +9,16 @@ import SwiftUI
 import SwiftUICharts
 
 struct OneDayView: View {
+    
+    @ObservedObject var cyJsonXXIV = CaiYunJsonXXIV()
+    
+    init() {
+        cyJsonXXIV.cyNetworkStartXXIV()
+    }//view初始化时候进行网络请求
+    
     var body: some View {
+        
+        
         ZStack{
             Rectangle()
                 .fill(Color("Background"))
@@ -17,15 +26,14 @@ struct OneDayView: View {
                 .frame(height: UIScreen.main.bounds.height/4)
             VStack{
                 HStack{
-                    Text("24小时温度")
+                    Text("48小时温度(当前时间开始计算)")
                         .font(.subheadline)
                     Spacer()
                 }
                 .padding(.horizontal)
                 HStack {
-                    LineChartView(data: [90,99,78,111,70,60,77], title: "",form: ChartForm.extraLarge, dropShadow: false).padding(.horizontal)
-                    
-
+                    LineChartView(data: cyJsonXXIV.highTem, title: "",form: ChartForm.extraLarge, dropShadow: false).padding(.leading)
+                    LineChartView(data: cyJsonXXIV.highTem2, title: "",form: ChartForm.extraLarge, dropShadow: false).padding(.trailing)
                 }
             }
         }.padding()
