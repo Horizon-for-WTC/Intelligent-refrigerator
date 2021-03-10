@@ -1,41 +1,38 @@
 //
-//  QuickerCook.swift
+//  QuickerCook2.swift
 //  Intelligent refrigerator
 //
-//  Created by cjj on 2021/3/2.
+//  Created by 陈佳俊 on 2021/3/10.
 //
 
 import SwiftUI
-
+import WaterfallGrid
 struct QuickerCook: View {
-    @Environment(\.presentationMode) var presentationMode
-    let columns=[GridItem(.adaptive(minimum: UIScreen.main.bounds.width/3))]
     var body: some View {
-        VStack {
-            ZStack {
-                HStack {
-                    Image(systemName: "house")
-                        .imageScale(.large)
-                    Spacer()
-                    Image(systemName: "mic.fill")
-                        .imageScale(.large)
+        ZStack {
+            Color.Neumorphic.main.ignoresSafeArea()
+            VStack {
+                ZStack {
+                    HStack {
+                        Image(systemName: "house")
+                            .imageScale(.large)
+                        Spacer()
+                        Image(systemName: "mic.fill")
+                            .imageScale(.large)
+                    }
+                    Text("快手菜")
+                        .font(.title2)
                 }
-                Text("快手菜")
-                    .font(.title2)
-            }
-            .foregroundColor(.white)
-            .padding(.horizontal)
-            ScrollView {
-                    LazyVGrid(columns: columns) {
-                        ForEach(0..<6) { item in
-                            Cookmenu()
-                        }
+                .foregroundColor(.gray)
+                .padding(.horizontal)
+                ScrollView {
+                    WaterfallGrid((0..<10), id: \.self) { index in
+                        Cookmenu().padding()
                     }
                 }
-        }.background(Color.gray.ignoresSafeArea(.all))
-    }
-}
-
+            }
+        }
+}}
 struct Cookmenu:View {
     var image="cc"
     var title="可乐鸡翅"
@@ -48,7 +45,7 @@ struct Cookmenu:View {
                 VStack (alignment: .leading, spacing: 0.0){
                     Image("\(image)")
                         .resizable()
-                        .frame(width: 350, height: 180, alignment: .center)
+                        .frame(width: 380, height: 180, alignment: .center)
                     VStack(alignment: .leading, spacing: 8.0) {
                         HStack {
                             Text("\(title)")
@@ -66,17 +63,20 @@ struct Cookmenu:View {
                             Text("\(people)")
                         }
                     }
-                    .padding(.horizontal, 5.0)
-                    .frame(width: 350, height: 150, alignment: .leading)
-                    .background(Color.white)
+                    .padding(.horizontal)
+                    .frame(width: 380, height: 150, alignment: .leading)
+                    .background(Color("Background"))
                 }
             }
             .clipShape(RoundedRectangle(cornerRadius: 15))
+            .softOuterShadow()
+            
         }
     }
 }
+
 struct QuickerCook_Previews: PreviewProvider {
     static var previews: some View {
-        QuickerCook()
+        QuickerCook().preferredColorScheme(.light)
     }
 }

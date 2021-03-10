@@ -12,7 +12,6 @@
 		07144B6F25F1149300C7AD42 /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07144B6E25F1149300C7AD42 /* Call.swift */; };
 		071DCF5525ED8D690061CAD2 /* CookBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071DCF5425ED8D690061CAD2 /* CookBook.swift */; };
 		071DCF5925ED90350061CAD2 /* CookBookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071DCF5825ED90350061CAD2 /* CookBookData.swift */; };
-		071DCF5D25ED9CA00061CAD2 /* QuickerCook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071DCF5C25ED9CA00061CAD2 /* QuickerCook.swift */; };
 		07A71CF525F0343B002D57B1 /* Doorbell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A71CF425F0343B002D57B1 /* Doorbell.swift */; };
 		07A71CF825F036F2002D57B1 /* Doorbelled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A71CF725F036F2002D57B1 /* Doorbelled.swift */; };
 		07A71CFB25F03711002D57B1 /* Doorbellmessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A71CFA25F03711002D57B1 /* Doorbellmessage.swift */; };
@@ -25,6 +24,8 @@
 		094BE78425F7513C0039FED7 /* AddFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094BE78325F7513C0039FED7 /* AddFood.swift */; };
 		094BE78825F751650039FED7 /* Foodmessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094BE78725F751650039FED7 /* Foodmessage.swift */; };
 		094BE78C25F751D10039FED7 /* HomepageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094BE78B25F751D10039FED7 /* HomepageView.swift */; };
+		09CC993725F8C3F10094B0E9 /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 09CC993625F8C3F10094B0E9 /* WaterfallGrid */; };
+		09CC993A25F8C40F0094B0E9 /* QuickerCook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CC993925F8C40F0094B0E9 /* QuickerCook.swift */; };
 		30145FAC25CB99680063D2D1 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30145FAB25CB99680063D2D1 /* TopBarView.swift */; };
 		30145FB025CB9AD30063D2D1 /* TimeAndWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30145FAF25CB9AD30063D2D1 /* TimeAndWeatherView.swift */; };
 		30B193B425BFC0D60030E782 /* Intelligent_refrigeratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B193B325BFC0D60030E782 /* Intelligent_refrigeratorApp.swift */; };
@@ -52,7 +53,6 @@
 		07144B6E25F1149300C7AD42 /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
 		071DCF5425ED8D690061CAD2 /* CookBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBook.swift; sourceTree = "<group>"; };
 		071DCF5825ED90350061CAD2 /* CookBookData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookBookData.swift; sourceTree = "<group>"; };
-		071DCF5C25ED9CA00061CAD2 /* QuickerCook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickerCook.swift; sourceTree = "<group>"; };
 		07A71CF425F0343B002D57B1 /* Doorbell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doorbell.swift; sourceTree = "<group>"; };
 		07A71CF725F036F2002D57B1 /* Doorbelled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doorbelled.swift; sourceTree = "<group>"; };
 		07A71CFA25F03711002D57B1 /* Doorbellmessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doorbellmessage.swift; sourceTree = "<group>"; };
@@ -64,6 +64,7 @@
 		094BE78325F7513C0039FED7 /* AddFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFood.swift; sourceTree = "<group>"; };
 		094BE78725F751650039FED7 /* Foodmessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foodmessage.swift; sourceTree = "<group>"; };
 		094BE78B25F751D10039FED7 /* HomepageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageView.swift; sourceTree = "<group>"; };
+		09CC993925F8C40F0094B0E9 /* QuickerCook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickerCook.swift; sourceTree = "<group>"; };
 		30145FAB25CB99680063D2D1 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		30145FAF25CB9AD30063D2D1 /* TimeAndWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAndWeatherView.swift; sourceTree = "<group>"; };
 		30B193B025BFC0D60030E782 /* Intelligent refrigerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Intelligent refrigerator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +93,7 @@
 				094BE76D25F74BEB0039FED7 /* Neumorphic in Frameworks */,
 				30C7BF7725F5D56E00F1E39F /* SwiftyJSON in Frameworks */,
 				30C7BF7325F5D51400F1E39F /* Alamofire in Frameworks */,
+				09CC993725F8C3F10094B0E9 /* WaterfallGrid in Frameworks */,
 				30C7BF7F25F5DA7400F1E39F /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,8 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				094BE77B25F750DB0039FED7 /* OftenFood.swift */,
-				094BE77F25F7510B0039FED7 /* FoodLable.swift */,
 				094BE78325F7513C0039FED7 /* AddFood.swift */,
+				094BE77F25F7510B0039FED7 /* FoodLable.swift */,
 				094BE78725F751650039FED7 /* Foodmessage.swift */,
 			);
 			path = Food;
@@ -143,7 +145,7 @@
 			children = (
 				094BE78B25F751D10039FED7 /* HomepageView.swift */,
 				071DCF5425ED8D690061CAD2 /* CookBook.swift */,
-				071DCF5C25ED9CA00061CAD2 /* QuickerCook.swift */,
+				09CC993925F8C40F0094B0E9 /* QuickerCook.swift */,
 				07BEA1A425EEE49C00C52870 /* CoolVideo.swift */,
 				07BEA1A725EEEABF00C52870 /* Cookserch.swift */,
 				07A71CFD25F0428C002D57B1 /* Thermostat.swift */,
@@ -265,6 +267,7 @@
 				30C7BF7E25F5DA7400F1E39F /* SwiftUIX */,
 				30CC939625F6204600F04483 /* SwiftSpeech */,
 				094BE76C25F74BEB0039FED7 /* Neumorphic */,
+				09CC993625F8C3F10094B0E9 /* WaterfallGrid */,
 			);
 			productName = "Intelligent refrigerator";
 			productReference = 30B193B025BFC0D60030E782 /* Intelligent refrigerator.app */;
@@ -300,6 +303,7 @@
 				30C7BF7D25F5DA7400F1E39F /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 				30CC939525F6204600F04483 /* XCRemoteSwiftPackageReference "SwiftSpeech" */,
 				094BE76B25F74BEB0039FED7 /* XCRemoteSwiftPackageReference "neumorphic" */,
+				09CC993525F8C3F10094B0E9 /* XCRemoteSwiftPackageReference "WaterfallGrid" */,
 			);
 			productRefGroup = 30B193B125BFC0D60030E782 /* Products */;
 			projectDirPath = "";
@@ -348,7 +352,6 @@
 				30B193C025BFC0D70030E782 /* Intelligent_refrigerator.xcdatamodeld in Sources */,
 				094BE77C25F750DB0039FED7 /* OftenFood.swift in Sources */,
 				07A71CF525F0343B002D57B1 /* Doorbell.swift in Sources */,
-				071DCF5D25ED9CA00061CAD2 /* QuickerCook.swift in Sources */,
 				094BE78425F7513C0039FED7 /* AddFood.swift in Sources */,
 				07A71CFE25F0428C002D57B1 /* Thermostat.swift in Sources */,
 				07144B6F25F1149300C7AD42 /* Call.swift in Sources */,
@@ -356,6 +359,7 @@
 				071DCF5525ED8D690061CAD2 /* CookBook.swift in Sources */,
 				30FBD23325F86A6700D2606C /* OneDayView.swift in Sources */,
 				30C7BF6F25F5D31500F1E39F /* WeatherAndLocation.swift in Sources */,
+				09CC993A25F8C40F0094B0E9 /* QuickerCook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +558,14 @@
 				minimumVersion = 2.0.5;
 			};
 		};
+		09CC993525F8C3F10094B0E9 /* XCRemoteSwiftPackageReference "WaterfallGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/paololeonardi/WaterfallGrid.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
 		30C7BF7125F5D51400F1E39F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -601,6 +613,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 094BE76B25F74BEB0039FED7 /* XCRemoteSwiftPackageReference "neumorphic" */;
 			productName = Neumorphic;
+		};
+		09CC993625F8C3F10094B0E9 /* WaterfallGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 09CC993525F8C3F10094B0E9 /* XCRemoteSwiftPackageReference "WaterfallGrid" */;
+			productName = WaterfallGrid;
 		};
 		30C7BF7225F5D51400F1E39F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
