@@ -40,6 +40,10 @@
 		30C7BF7F25F5DA7400F1E39F /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 30C7BF7E25F5DA7400F1E39F /* SwiftUIX */; };
 		30CC939725F6204600F04483 /* SwiftSpeech in Frameworks */ = {isa = PBXBuildFile; productRef = 30CC939625F6204600F04483 /* SwiftSpeech */; };
 		30CC939B25F6209700F04483 /* SpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CC939A25F6209700F04483 /* SpeechView.swift */; };
+		30FBD22B25F86A1E00D2606C /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FBD22A25F86A1E00D2606C /* WeatherView.swift */; };
+		30FBD22F25F86A5A00D2606C /* FiveDaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FBD22E25F86A5A00D2606C /* FiveDaysView.swift */; };
+		30FBD23325F86A6700D2606C /* OneDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FBD23225F86A6700D2606C /* OneDayView.swift */; };
+		30FBD23625F86A7B00D2606C /* MainCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FBD23525F86A7B00D2606C /* MainCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +76,10 @@
 		30B193C125BFC0D70030E782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30C7BF6E25F5D31500F1E39F /* WeatherAndLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAndLocation.swift; sourceTree = "<group>"; };
 		30CC939A25F6209700F04483 /* SpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechView.swift; sourceTree = "<group>"; };
+		30FBD22A25F86A1E00D2606C /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		30FBD22E25F86A5A00D2606C /* FiveDaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDaysView.swift; sourceTree = "<group>"; };
+		30FBD23225F86A6700D2606C /* OneDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneDayView.swift; sourceTree = "<group>"; };
+		30FBD23525F86A7B00D2606C /* MainCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +171,7 @@
 		304158A125BFCE16000AAFE6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				30FBD22D25F86A2A00D2606C /* Weather */,
 				30CE063F25F61C8000F4F87B /* Speech */,
 				07144B7725F1272F00C7AD42 /* Food */,
 				07144B6625F10C3F00C7AD42 /* CallPhone */,
@@ -220,6 +229,17 @@
 				30CC939A25F6209700F04483 /* SpeechView.swift */,
 			);
 			path = Speech;
+			sourceTree = "<group>";
+		};
+		30FBD22D25F86A2A00D2606C /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				30FBD22A25F86A1E00D2606C /* WeatherView.swift */,
+				30FBD22E25F86A5A00D2606C /* FiveDaysView.swift */,
+				30FBD23225F86A6700D2606C /* OneDayView.swift */,
+				30FBD23525F86A7B00D2606C /* MainCardView.swift */,
+			);
+			path = Weather;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +332,7 @@
 				094BE78825F751650039FED7 /* Foodmessage.swift in Sources */,
 				07144B6825F10C7200C7AD42 /* NumberPhone.swift in Sources */,
 				30145FAC25CB99680063D2D1 /* TopBarView.swift in Sources */,
+				30FBD22B25F86A1E00D2606C /* WeatherView.swift in Sources */,
 				07A71CFB25F03711002D57B1 /* Doorbellmessage.swift in Sources */,
 				30145FB025CB9AD30063D2D1 /* TimeAndWeatherView.swift in Sources */,
 				30B193B625BFC0D60030E782 /* ContentView.swift in Sources */,
@@ -322,6 +343,7 @@
 				094BE78025F7510B0039FED7 /* FoodLable.swift in Sources */,
 				30CC939B25F6209700F04483 /* SpeechView.swift in Sources */,
 				07BEA1A525EEE49C00C52870 /* CoolVideo.swift in Sources */,
+				30FBD22F25F86A5A00D2606C /* FiveDaysView.swift in Sources */,
 				094BE78C25F751D10039FED7 /* HomepageView.swift in Sources */,
 				30B193C025BFC0D70030E782 /* Intelligent_refrigerator.xcdatamodeld in Sources */,
 				094BE77C25F750DB0039FED7 /* OftenFood.swift in Sources */,
@@ -330,7 +352,9 @@
 				094BE78425F7513C0039FED7 /* AddFood.swift in Sources */,
 				07A71CFE25F0428C002D57B1 /* Thermostat.swift in Sources */,
 				07144B6F25F1149300C7AD42 /* Call.swift in Sources */,
+				30FBD23625F86A7B00D2606C /* MainCardView.swift in Sources */,
 				071DCF5525ED8D690061CAD2 /* CookBook.swift in Sources */,
+				30FBD23325F86A6700D2606C /* OneDayView.swift in Sources */,
 				30C7BF6F25F5D31500F1E39F /* WeatherAndLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
