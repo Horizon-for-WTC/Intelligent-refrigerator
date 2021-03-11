@@ -61,7 +61,7 @@ struct FoodLabel: View {
                 self.isshow=false
             }
             if isshow {
-                Foodmessage(isshow: $isshow)
+                Foodmessage()
             }
         }
     }

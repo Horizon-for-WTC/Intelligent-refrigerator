@@ -37,9 +37,12 @@ struct Doorbell: View {
                             .clipShape(Circle())
                         Spacer()
                         HStack(spacing: 100.0){
-                            ForEach(0..<3, id: \.self) { value  in
-                                CircleButton()
-                            }
+//                            ForEach(0..<3, id: \.self) { value  in
+//                                CircleButton()
+//                            }
+                            CircleButton(image: "phone.down.fill", title: "挂断")
+                            CircleButton(image: "mic.fill", title: "语音回复")
+                            CircleButton(image: "phone.fill")
                         }
                         .padding(.bottom, 30.0)
                     }
@@ -56,13 +59,13 @@ struct CircleButton:View {
     var size:CGFloat=60
     var body: some View{
         VStack(alignment: .center) {
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    VStack {
-                        Image(systemName: image)
-                            .aspectRatio(contentMode: .fit)
-                            .font(.system(size: 48))
-                            .foregroundColor(Color.white.opacity(0.4))
-                    }.frame(width: size, height: size, alignment: .center)
+            Button(action: {}, label: {
+                VStack {
+                    Image(systemName: image)
+                        .aspectRatio(contentMode: .fit)
+                        .font(.system(size: 48))
+                        .foregroundColor(Color.white.opacity(0.4))
+                }.frame(width: size, height: size, alignment: .center)
             }).softButtonStyle(Circle())
             Text(title).foregroundColor(.gray)
         }

@@ -9,12 +9,12 @@ import SwiftUI
 
 struct Foodmessage: View {
     @Environment(\.presentationMode) var presentationMode
-    @Binding var isshow:Bool
+//    @Binding var isshow:Bool
     var body: some View {
         ZStack {
             Color.Neumorphic.main.ignoresSafeArea().onTapGesture {
                 self.presentationMode.wrappedValue.dismiss()
-                self.isshow.toggle()
+//                self.isshow.toggle()
                 
             }
             ZStack{
@@ -53,6 +53,6 @@ struct Foodmessage: View {
 
 struct Foodmessage_Previews: PreviewProvider {
     static var previews: some View {
-        Foodmessage(isshow: FoodLabel().$isshow).preferredColorScheme(.dark)
+        Foodmessage().preferredColorScheme(.dark)
     }
 }

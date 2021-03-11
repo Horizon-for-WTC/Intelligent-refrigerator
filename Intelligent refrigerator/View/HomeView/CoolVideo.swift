@@ -15,7 +15,9 @@ struct CoolVideo: View {
             ZStack(alignment: .topLeading) {
                 Rectangle().edgesIgnoringSafeArea(.top
                 )
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
                     Image(systemName: "chevron.left")
                         .imageScale(.large)
                         .foregroundColor(.white)
@@ -35,12 +37,12 @@ struct CoolVideo: View {
                     Spacer()
                     HStack(spacing: 8.0) {
                         Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            Image(systemName: "play.fill")
+                            Image(systemName: "speaker.wave.2")
                                 .imageScale(.large)
                                 
                         })
                         Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            Image(systemName: "play.fill")
+                            Image(systemName: "eye.slash")
                                 .imageScale(.large)
                                 
                         })
@@ -97,7 +99,10 @@ struct CoolVideo: View {
                     .padding(.horizontal)
                 }
             }
-        }.background(Color.gray.ignoresSafeArea())
+        }
+        .background(Color.Neumorphic.main.ignoresSafeArea())
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
     }
 }
 

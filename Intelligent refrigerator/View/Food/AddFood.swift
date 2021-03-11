@@ -13,7 +13,7 @@ struct AddFood: View {
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         ZStack {
-            Color.Neumorphic.main
+            Color.Neumorphic.main.ignoresSafeArea()
            
                 RoundedRectangle(cornerRadius: 18)
                     .fill(Color.Neumorphic.main)
