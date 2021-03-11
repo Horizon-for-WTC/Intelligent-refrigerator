@@ -94,6 +94,7 @@ struct CookCircleButton: View {
 }
 
 struct BanderCook: View {
+//    @Binding var isshowVideo:Bool
     var image="perch"
     var icon=""
     var title="今日菜谱"
