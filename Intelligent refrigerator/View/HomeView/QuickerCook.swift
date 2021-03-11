@@ -8,14 +8,21 @@
 import SwiftUI
 import WaterfallGrid
 struct QuickerCook: View {
+    @Environment(\.presentationMode) var presentationMode
+    @State var navtoCookVide0=false
     var body: some View {
         ZStack {
             Color.Neumorphic.main.ignoresSafeArea()
             VStack {
                 ZStack {
                     HStack {
-                        Image(systemName: "house")
-                            .imageScale(.large)
+                        Button(action: {
+                            presentationMode.wrappedValue.dismiss()
+                        }, label: {
+                            Image(systemName: "house")
+                                .imageScale(.large)
+                        })
+
                         Spacer()
                         Image(systemName: "mic.fill")
                             .imageScale(.large)
@@ -26,23 +33,33 @@ struct QuickerCook: View {
                 .foregroundColor(.gray)
                 .padding(.horizontal)
                 ScrollView {
-                    WaterfallGrid((0..<10), id: \.self) { index in
-                        Cookmenu().padding()
+                    WaterfallGrid(0 ..< 10, id: \.self) { _ in
+                        NavigationLink(
+                            destination: CoolVideo(),
+                            isActive: $navtoCookVide0,
+                            label: {
+                                Cookmenu().padding()
+                            })
+                       
                     }
                 }
             }
         }
-}}
-struct Cookmenu:View {
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
+    }
+}
+
+struct Cookmenu: View {
     var image="cc"
     var title="可乐鸡翅"
     var subtitle="可乐，鸡翅，料酒，生姜，盐"
     var time="预计10-30分钟"
     var people="1233人做过"
-    var body: some View{
-        VStack(alignment: .leading, spacing: 0.0){
-            ZStack{
-                VStack (alignment: .leading, spacing: 0.0){
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0.0) {
+            ZStack {
+                VStack(alignment: .leading, spacing: 0.0) {
                     Image("\(image)")
                         .resizable()
                         .frame(width: 380, height: 180, alignment: .center)
@@ -54,15 +71,16 @@ struct Cookmenu:View {
                             Image(systemName: "bookmark")
                         }
                         Text("\(subtitle)")
-                        HStack{
+                        HStack {
                             Image(systemName: "stopwatch")
                             Text("\(time)")
                         }
-                        HStack{
+                        HStack {
                             Image(systemName: "person.fill")
                             Text("\(people)")
                         }
                     }
+                    .foregroundColor(.gray)
                     .padding(.horizontal)
                     .frame(width: 380, height: 150, alignment: .leading)
                     .background(Color("Background"))
@@ -70,7 +88,6 @@ struct Cookmenu:View {
             }
             .clipShape(RoundedRectangle(cornerRadius: 15))
             .softOuterShadow()
-            
         }
     }
 }

@@ -10,6 +10,7 @@ import SwiftUIX
 struct CookBook: View {
     @Environment(\.presentationMode) var presentationMode
     @State var isshowvideo=false
+    @State var navtoCookBook=false
     var body: some View {
         VStack {
             ZStack {
@@ -44,18 +45,18 @@ struct CookBook: View {
                         HStack {
                             ForEach(0..<10, id: \.self) { _ in
                                NavigationLink(
-                                destination: CoolVideo(),
-                                isActive: $isshowvideo,
+                                destination: QuickerCook(),
+                                isActive: $navtoCookBook,
                                 label: {
-                                    CookCircleButton(isshowVideo: $isshowvideo, image: "cc", title: "鱼香肉丝", size: 150).padding()
-                                })
+                                    CookCircleButton(isshow: $navtoCookBook, image: "cc", title: "快手菜", size: 150).padding()
+                                })              // 跳转到菜谱
                             }
                         }
                     }
 
-                    BanderCook()
-                    BanderCook(title: "收藏菜谱", sizebig: 150, sizesmall: 60)
-                    BanderCook(title: "热门菜谱", sizebig: 150, sizesmall: 60)
+                    BanderCook(isshowVideo: $isshowvideo)
+                    BanderCook(isshowVideo: $isshowvideo,title: "收藏菜谱", sizebig: 150, sizesmall: 60)
+                    BanderCook(isshowVideo: $isshowvideo,title: "热门菜谱", sizebig: 150, sizesmall: 60)
                 }
             }
             .navigationBarTitle(Text("菜谱"), displayMode: .inline)
@@ -71,14 +72,14 @@ struct CookBook: View {
 }
 
 struct CookCircleButton: View {
-    @Binding var isshowVideo:Bool
+    @Binding var isshow:Bool
     var image="cc"
     var title="接听"
     var size: CGFloat=100
     var body: some View {
         VStack(alignment: .center) {
                     Button(action: {
-                        self.isshowVideo.toggle()
+                        self.isshow.toggle()
                     }, label: {
                         VStack {
                             Image(image)
@@ -94,7 +95,7 @@ struct CookCircleButton: View {
 }
 
 struct BanderCook: View {
-//    @Binding var isshowVideo:Bool
+    @Binding var isshowVideo:Bool
     var image="perch"
     var icon=""
     var title="今日菜谱"
@@ -112,16 +113,26 @@ struct BanderCook: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(0..<5, id: \.self) { _ in
-                        ZStack {
-                            Rectangle()
-                                .fill(Color.Neumorphic.main)
-                                .frame(width: sizebig, height: sizebig, alignment: .center)
-                                .softOuterShadow()
-                            Image("\(image)")
-                                .resizable()
-                                .frame(width: sizesmall, height: sizesmall, alignment: .center)
-                                .aspectRatio(contentMode: .fill)
-                        }
+                        NavigationLink(
+                            destination: CoolVideo(),
+                            isActive: $isshowVideo,
+                            label: {
+                                Button(action: {
+                                    self.isshowVideo.toggle()
+                                }, label: {
+                                    ZStack {
+                                        Rectangle()
+                                            .fill(Color.Neumorphic.main)
+                                            .frame(width: sizebig, height: sizebig, alignment: .center)
+                                            .softOuterShadow()
+                                        Image("\(image)")
+                                            .resizable()
+                                            .frame(width: sizesmall, height: sizesmall, alignment: .center)
+                                            .aspectRatio(contentMode: .fill)
+                                    }
+                                })
+                               
+                            })
                     }
                     .padding()
                 }

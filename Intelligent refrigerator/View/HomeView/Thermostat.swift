@@ -79,6 +79,7 @@ struct Thermostat:View {
                         
                     }
                 }
+                Spacer()
             }
         }
     }
