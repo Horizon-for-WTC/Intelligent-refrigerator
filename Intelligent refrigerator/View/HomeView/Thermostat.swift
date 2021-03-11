@@ -64,16 +64,22 @@ struct Thermostat:View {
                 }.frame(width: UIScreen.main.bounds.width/2, height: 600, alignment: .center)
                 Spacer()
                 ZStack {
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.Neumorphic.main)
-                        .frame(width: UIScreen.main.bounds.width/2, height: 150)
-                        .softOuterShadow()
+//                    RoundedRectangle(cornerRadius: 10)
+//                        .fill(Color.Neumorphic.main)
+//                        .frame(width: UIScreen.main.bounds.width/2, height: 150)
+//                        .softOuterShadow()
                     HStack(spacing: 30.0){
                         CircleButton(image: "", title: "模式", size: 60)
                         CircleButton(image: "", title: "模式", size: 60)
                         CircleButton(image: "", title: "模式", size: 60)
+                        CircleButton(image: "", title: "模式", size: 60)
+                        CircleButton(image: "", title: "模式", size: 60)
+                        CircleButton(image: "", title: "模式", size: 60)
+                      
+                        
                     }
                 }
+                Spacer()
             }
         }
     }
@@ -81,6 +87,6 @@ struct Thermostat:View {
 
 struct Thermostat_Previews: PreviewProvider {
     static var previews: some View {
-        Thermostat().preferredColorScheme(.dark)
+        Thermostat().preferredColorScheme(.light)
     }
 }

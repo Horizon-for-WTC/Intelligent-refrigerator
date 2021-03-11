@@ -13,7 +13,7 @@ struct AddFood: View {
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         ZStack {
-            Color.Neumorphic.main
+          
            
                 RoundedRectangle(cornerRadius: 18)
                     .fill(Color.Neumorphic.main)
@@ -83,6 +83,6 @@ struct CJJNeumorphicBut:View {
 
 struct AddFood_Previews: PreviewProvider {
     static var previews: some View {
-        AddFood(isshow: OftenFood().$isshowAdd).preferredColorScheme(.dark)
+        AddFood(isshow: OftenFood().$isshowAdd).preferredColorScheme(.light)
     }
 }

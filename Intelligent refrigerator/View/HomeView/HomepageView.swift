@@ -28,7 +28,9 @@ struct HomepageView: View
     @State var navtoFood=false // 跳转到食物
     @State var navtoFoodmessage=false //跳转到食物信息
     @State var navtoDoorbell=false
-    @Binding var isshowFoodLable:Bool
+    @State var navtoCookBook=false
+    @State var navtoCookVideo=false
+//    @Binding var isshowFoodLable:Bool
     var foods=["西红柿", "生菜", "火龙果"] // 过期或临期食物数组     内容为过期时间最长的三个
     var body: some View
     {
@@ -69,21 +71,37 @@ struct HomepageView: View
                         // 菜谱功能
                         VStack
                         {
-                            HStack
-                            {
-                                Text("菜谱推荐")
-                                    .foregroundColor(.white)
-                                    .font(.custom("", fixedSize: 40))
-                                Spacer()
-                            }
-                            .padding()
+                            NavigationLink(
+                                destination: CookBook(),
+                                isActive: $navtoCookBook,
+                                label: {
+                                    Button(action: { self.navtoCookBook.toggle() }, label: {
+                                        HStack
+                                        {
+                                            Text("菜谱推荐")
+                                                .foregroundColor(.white)
+                                                .font(.custom("", fixedSize: 40))
+                                            Spacer()
+                                        }
+                                        .padding()
+                                    })
+                                })
+                            
                             // 点击菜谱跳转到对应页面
-                            Button(action: {}, label: {
-                                Image("perch") // 菜谱图片 跟换名字达到轮播图效果
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 300, height: 300)
-                            })
+                            NavigationLink(
+                                destination: CoolVideo(),
+                                isActive: $navtoCookVideo,
+                                label: {
+                                    Button(action: {
+                                        self.navtoCookVideo.toggle()
+                                    }, label: {
+                                        Image("perch") // 菜谱图片 跟换名字达到轮播图效果
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 300, height: 300)
+                                    })
+                                })
+                            
                         }
                         .frame(width: UIScreen.main.bounds.width/2-40, height: 450)
                         .background(Color.gray)
@@ -261,7 +279,7 @@ struct HomepageView: View
                             ForEach(foods, id: \.self)
                             { item in
                                 NavigationLink(
-                                    destination: Foodmessage(isshow: $isshowFoodLable),
+                                    destination: Foodmessage(),
                                     isActive: $navtoFoodmessage,
                                     label: {
                                         Group {
@@ -368,6 +386,6 @@ struct HomepageView_Previews: PreviewProvider
 {
     static var previews: some View
     {
-        HomepageView(isshowFoodLable: FoodLabel().$isshow)
+        HomepageView()
     }
 }
