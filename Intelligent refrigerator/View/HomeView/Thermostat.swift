@@ -82,6 +82,8 @@ struct Thermostat:View {
                 Spacer()
             }
         }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

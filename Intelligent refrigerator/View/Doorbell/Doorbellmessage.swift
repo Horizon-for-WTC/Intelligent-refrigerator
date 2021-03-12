@@ -27,7 +27,9 @@ struct Doorbellmessage: View {
                     Divider()
                     HStack{
                         Spacer()
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        Button(action: {
+                            presentationMode.wrappedValue.dismiss()
+                        }, label: {
                             Text("取消")
                                 .font(.title)
                                 .padding(.horizontal,20)
@@ -37,7 +39,9 @@ struct Doorbellmessage: View {
                         Text("|")
                             .font(.title)
                         Spacer()
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        Button(action: {
+                            presentationMode.wrappedValue.dismiss()
+                        }, label: {
                             Text("确定")
                                 .font(.title)
                                 .padding(.horizontal,20)
@@ -51,6 +55,8 @@ struct Doorbellmessage: View {
             }
            
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
         
     }
 }

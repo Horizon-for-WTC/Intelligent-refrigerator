@@ -30,6 +30,7 @@ struct HomepageView: View
     @State var navtoDoorbell=false
     @State var navtoCookBook=false
     @State var navtoCookVideo=false
+    @State var navtoThermostat=false
 //    @Binding var isshowFoodLable:Bool
     var foods=["西红柿", "生菜", "火龙果"] // 过期或临期食物数组     内容为过期时间最长的三个
     var body: some View
@@ -191,16 +192,27 @@ struct HomepageView: View
                                             Text("假日")
                                         }
                                     })
-                                    Button(action: /*@START_MENU_TOKEN@*/ {}/*@END_MENU_TOKEN@*/, label: {
-                                        VStack
-                                        {
-                                            Image("perch")
-                                                .resizable()
-                                                .frame(width: 60, height: 60)
-                                                .clipShape(Circle())
-                                            Text("自定义")
-                                        }
-                                    })
+                                    
+                                    NavigationLink(
+                                        destination: Thermostat(),
+                                        isActive: $navtoThermostat,
+                                        label: {
+                                            Button(action: {
+                                                self.navtoThermostat=true
+                                            }, label: {
+                                               
+                                                    VStack
+                                                    {
+                                                        Image("perch")
+                                                            .resizable()
+                                                            .frame(width: 60, height: 60)
+                                                            .clipShape(Circle())
+                                                        Text("自定义")
+                                                    }
+                                                
+                                            })
+                                        })
+                                    
                                 }
                             }
                             .padding()
@@ -379,6 +391,8 @@ struct HomepageView: View
             .navigationBarHidden(true)
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
     }
 }
 
