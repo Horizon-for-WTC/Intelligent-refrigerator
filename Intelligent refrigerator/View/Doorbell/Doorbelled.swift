@@ -56,13 +56,14 @@ struct Doorbelled: View {
                 .blur(radius: isshowmessage ? 5 : 0)
                 .navigationBarTitle(Text("智能门铃"), displayMode: .inline)
                 .navigationBarBackButtonHidden(true)
-                .navigationBarItems(leading: Button(action: {}, label: {
-                    Image(systemName: "")
-            }))
+                .navigationBarHidden(true)
                 if isshowmessage{
                     Doorbellmessage()
                 }
-            }.background(Color.Neumorphic.main.ignoresSafeArea())
+            }
+            .background(Color.Neumorphic.main.ignoresSafeArea())
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
     }
 }
 
