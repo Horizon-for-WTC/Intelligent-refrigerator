@@ -144,41 +144,45 @@ class CaiYunJsonXXIV: LocationViewModel {
     let cyToken = "HYzglwyB98oRNaYL"
     var cyUrl: URL { URL(string: "https://api.caiyunapp.com/v2.5/\(cyToken)/\(userLongitude),\(userLatitude)/hourly.json")! }
     
+    
+    
+    
     func cyNetworkStartXXIV()  {
-        print(cyUrl)
-        AF.request(self.cyUrl).responseJSON{ [self]
-            (response) in
-            switch response.result{
-            case .success:
-                if let value = response.value{
-                    let json = JSON(value)
-                    //获得json数据，开始swiftyjson解析
-                    for index in 0...23 {
-                        if let number = json["result"]["hourly"]["temperature"][index]["value"].double{
-                            //print(number)
-                            self.highTem.append(number)
-                            //print(self.highTem)
-                        }
+        
+        let queue = DispatchQueue.main
+        queue.async {
+            //开新线程
+            print(self.cyUrl)
+            AF.request(self.cyUrl).responseJSON{ [self]
+                (response) in
+                switch response.result{
+                case .success:
+                    if let value = response.value{
+                        let json = JSON(value)
+                        //获得json数据，开始swiftyjson解析
+                        for index in 0...23 {
+                            if let number = json["result"]["hourly"]["temperature"][index]["value"].double{
+                                //print(number)
+                                self.highTem.append(number)
+                                //print(self.highTem)
+                            }
+                        }//遍历写入前24小时温度
+                        for index in 24...47 {
+                            if let number = json["result"]["hourly"]["temperature"][index]["value"].double{
+                                //print(number)
+                                self.highTem2.append(number)
+                                //print(self.highTem)
+                            }
+                        }//遍历写入后24小时温度
+                        
+                        
                     }
-                    for index in 24...47 {
-                        if let number = json["result"]["hourly"]["temperature"][index]["value"].double{
-                            //print(number)
-                            self.highTem2.append(number)
-                            //print(self.highTem)
-                        }
-                    }
+                    break
                     
-//                    if let number = json["result"]["hourly"]["temperature"][0]["value"].int{
-//                        print(number)
-//                    }
-                    
-                    
+                case .failure(let error):
+                    print("error\(error)")
+                    break
                 }
-                break
-                
-            case .failure(let error):
-                print("error\(error)")
-                break
             }
         }
     }

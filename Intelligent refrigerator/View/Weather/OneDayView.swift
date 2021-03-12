@@ -13,6 +13,7 @@ struct OneDayView: View {
     @ObservedObject var cyJsonXXIV = CaiYunJsonXXIV()
     
     init() {
+        
         cyJsonXXIV.cyNetworkStartXXIV()
     }//view初始化时候进行网络请求
     
