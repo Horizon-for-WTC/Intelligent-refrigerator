@@ -79,8 +79,11 @@ class CaiYunJsonRealtime:LocationViewModel {
     //我的彩云开发者api。。。禁止外传，，，，，
     
     func cyNetworkStart() {
-        print(cyUrl)
-        AF.request(cyUrl).responseJSON{
+        
+        //let queue = DispatchQueue.main
+        // queue.async {
+        print(self.cyUrl)
+        AF.request(self.cyUrl).responseJSON{
             (response) in
             switch response.result{
             case .success:
@@ -135,6 +138,7 @@ class CaiYunJsonRealtime:LocationViewModel {
             }
         }
     }
+    // }
 }
 
 class CaiYunJsonXXIV: LocationViewModel {
@@ -149,41 +153,41 @@ class CaiYunJsonXXIV: LocationViewModel {
     
     func cyNetworkStartXXIV()  {
         
-        let queue = DispatchQueue.main
-        queue.async {
-            //开新线程
-            print(self.cyUrl)
-            AF.request(self.cyUrl).responseJSON{ [self]
-                (response) in
-                switch response.result{
-                case .success:
-                    if let value = response.value{
-                        let json = JSON(value)
-                        //获得json数据，开始swiftyjson解析
-                        for index in 0...23 {
-                            if let number = json["result"]["hourly"]["temperature"][index]["value"].double{
-                                //print(number)
-                                self.highTem.append(number)
-                                //print(self.highTem)
-                            }
-                        }//遍历写入前24小时温度
-                        for index in 24...47 {
-                            if let number = json["result"]["hourly"]["temperature"][index]["value"].double{
-                                //print(number)
-                                self.highTem2.append(number)
-                                //print(self.highTem)
-                            }
-                        }//遍历写入后24小时温度
-                        
-                        
-                    }
-                    break
+        //        let queue = DispatchQueue.main
+        //        queue.async {
+        //开新线程
+        print(self.cyUrl)
+        AF.request(self.cyUrl).responseJSON{ [self]
+            (response) in
+            switch response.result{
+            case .success:
+                if let value = response.value{
+                    let json = JSON(value)
+                    //获得json数据，开始swiftyjson解析
+                    for index in 0...23 {
+                        if let number = json["result"]["hourly"]["temperature"][index]["value"].double{
+                            //print(number)
+                            self.highTem.append(number)
+                            //print(self.highTem)
+                        }
+                    }//遍历写入前24小时温度
+                    for index in 24...json["result"]["hourly"]["temperature"].count {
+                        if let number = json["result"]["hourly"]["temperature"][index]["value"].double{
+                            //print(number)
+                            self.highTem2.append(number)
+                            //print(self.highTem)
+                        }
+                    }//遍历写入后24小时温度
                     
-                case .failure(let error):
-                    print("error\(error)")
-                    break
+                    
                 }
+                break
+                
+            case .failure(let error):
+                print("error\(error)")
+                break
             }
         }
     }
+    //  }
 }
