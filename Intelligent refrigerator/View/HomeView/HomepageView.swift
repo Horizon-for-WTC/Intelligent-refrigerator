@@ -251,23 +251,30 @@ struct HomepageView: View
                                     Spacer()
                                     Button(action: /*@START_MENU_TOKEN@*/ {}/*@END_MENU_TOKEN@*/, label: {
                                         Image(systemName: "backward.end.fill")
+                                            .resizable()
+                                            .frame(width:28,height:28)
                                     }) // 上一曲
                                     Spacer()
                                     Button(action: {
                                         self.isplay.toggle()
                                     }, label: {
                                         Image(systemName: isplay ? "pause.fill" : "play.fill")
+                                            .resizable()
+                                            .frame(width:28,height:28)
                                     }) // 暂停播放
                                     Spacer()
                                     Button(action: {}, label: {
                                         Image(systemName: "forward.end.fill")
+                                            .resizable()
+                                            .frame(width:28,height:28)
                                     }) // 下一曲
                                         .padding(.trailing)
                                     Spacer()
                                 }
+                                .padding(.top, 20.0)
                             }
                         }
-                        .frame(width: UIScreen.main.bounds.width/2-40, height: 200)
+                        .frame(width: UIScreen.main.bounds.width/2-40, height: 250)
                         .background(Color.gray)
                         .foregroundColor(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 10.0))
@@ -329,6 +336,7 @@ struct HomepageView: View
                         // 功能区
                         VStack
                         {
+                            Spacer()
                             HStack(spacing: 20.0)
                             { // 定时器
                                 Button(action: {}, label: {
@@ -379,7 +387,7 @@ struct HomepageView: View
                             Spacer()
                         }
                         .padding()
-                        .frame(width: UIScreen.main.bounds.width/2-40, height: 200)
+                        .frame(width: UIScreen.main.bounds.width/2-40, height: 150)
                         .background(Color.gray)
                         .clipShape(RoundedRectangle(cornerRadius: 10.0))
                         .foregroundColor(.white)

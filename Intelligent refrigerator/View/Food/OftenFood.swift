@@ -85,3 +85,4 @@ struct OftenFood_Previews: PreviewProvider {
         OftenFood().preferredColorScheme(.light)
     }
 }
+
