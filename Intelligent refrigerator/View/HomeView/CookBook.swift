@@ -3,16 +3,16 @@
 //  Intelligent refrigerator
 //
 //  Created by cjj on 2021/3/2.
-// foreach 便利数据元
+// 详情跳转有bug
 
 import SwiftUI
 import SwiftUIX
 struct CookBook: View {
     @Environment(\.presentationMode) var presentationMode
     @State var isshowvideo=false
-    @State var isshowvideo0=false
     @State var isshowvideo1=false
     @State var isshowvideo2=false
+    @State var isshowvideo3=false
     @State var navtoCookBook=false
     var body: some View {
         VStack {
@@ -49,9 +49,7 @@ struct CookBook: View {
                     }
 
                     // 菜谱
-
-//                  BanderCook(isshowVideo: $isshowvideo)
-                    Recommend(isshow1: $isshowvideo0, isshow2: $isshowvideo1, isshow3: $isshowvideo2)
+                    Recommend(isshow1: $isshowvideo1, isshow2: $isshowvideo2, isshow3: $isshowvideo3)
                     BanderCook(isshowVideo: $isshowvideo, title: "收藏菜谱", sizebig: 150, sizesmall: 60)
                     BanderCook(isshowVideo: $isshowvideo, title: "热门菜谱", sizebig: 150, sizesmall: 60)
                 }
@@ -91,6 +89,7 @@ struct CookCircleButton: View {
     }
 }
 
+//普通菜谱卡片
 struct BanderCook: View {
     @Binding var isshowVideo: Bool
     var image="perch"
@@ -137,7 +136,7 @@ struct BanderCook: View {
         }
     }
 }
-
+//分栏菜谱
 struct Recommend: View {
     @Binding var isshow1: Bool
     @Binding var isshow2: Bool
@@ -173,14 +172,14 @@ struct Recommend: View {
             .foregroundColor(.white)
             TabView(selection: $index) {
                 RecommendBander(isshowVideo: $isshow1).tag(0)
-                RecommendBander(isshowVideo: $isshow2).tag(1)
-                RecommendBander(isshowVideo: $isshow3).tag(2)
+                RecommendBander(isshowVideo: $isshow2,image:"").tag(1)
+                RecommendBander(isshowVideo: $isshow3,image:"").tag(2)
             }.tabViewStyle(PageTabViewStyle(indexDisplayMode: PageTabViewStyle.IndexDisplayMode.never)).frame(width: UIScreen.main.bounds.width, height: 250, alignment: .center)
         }
         .frame(width: UIScreen.main.bounds.width, height: 300, alignment: .center)
     }
 }
-
+//分栏菜谱卡片
 struct RecommendBander: View {
     @Binding var isshowVideo: Bool
     var image="perch"
@@ -194,7 +193,7 @@ struct RecommendBander: View {
                     isActive: $isshowVideo,
                     label: {
                         Button(action: {
-                            self.isshowVideo.toggle()
+                            self.isshowVideo=true
                         }, label: {
                             ZStack {
                                 Rectangle()
