@@ -26,7 +26,7 @@ struct HomepageView: View
     @State var isplay=false // 音乐是否播放
     @State var isstr=0 // 判断留言数量是否为空
     @State var navtoFood=false // 跳转到食物
-    @State var navtoFoodmessage=false //跳转到食物信息
+    @State var navtoFoodmessage=false // 跳转到食物信息
     @State var navtoDoorbell=false
     @State var navtoCookBook=false
     @State var navtoCookVideo=false
@@ -102,7 +102,6 @@ struct HomepageView: View
                                             .frame(width: 300, height: 300)
                                     })
                                 })
-                            
                         }
                         .frame(width: UIScreen.main.bounds.width/2-40, height: 450)
                         .background(Color.gray)
@@ -113,18 +112,21 @@ struct HomepageView: View
                         {
                             HStack
                             { // 跳转到写留言
-                                Button(action: {}, label: {
-                                    VStack(spacing: 10.0)
-                                    {
-                                        Image(systemName: "plus.circle")
-                                            .resizable()
-                                            .frame(width: 60, height: 60)
-                                        Text("写留言")
-                                            .frame(width: 100, height: 40)
-                                            .background(Color.white.opacity(0.2))
-                                            .clipShape(Capsule())
-                                    }.foregroundColor(.white)
-                                })
+                                NavigationLink(
+                                    destination: NoteList(),
+                                    label: {
+                                        VStack(spacing: 10.0)
+                                        {
+                                            Image(systemName: "plus.circle")
+                                                .resizable()
+                                                .frame(width: 60, height: 60)
+                                            Text("写留言")
+                                                .frame(width: 100, height: 40)
+                                                .background(Color.white.opacity(0.2))
+                                                .clipShape(Capsule())
+                                        }.foregroundColor(.white)
+                                    })
+                                
                                 // 最新的一条留言
                                 // 判断是否有留言有就显示
                                 if isstr > 0
@@ -200,19 +202,17 @@ struct HomepageView: View
                                             Button(action: {
                                                 self.navtoThermostat=true
                                             }, label: {
-                                               
-                                                    VStack
-                                                    {
-                                                        Image("perch")
-                                                            .resizable()
-                                                            .frame(width: 60, height: 60)
-                                                            .clipShape(Circle())
-                                                        Text("自定义")
-                                                    }
+                                                VStack
+                                                {
+                                                    Image("perch")
+                                                        .resizable()
+                                                        .frame(width: 60, height: 60)
+                                                        .clipShape(Circle())
+                                                    Text("自定义")
+                                                }
                                                 
                                             })
                                         })
-                                    
                                 }
                             }
                             .padding()
@@ -252,7 +252,7 @@ struct HomepageView: View
                                     Button(action: /*@START_MENU_TOKEN@*/ {}/*@END_MENU_TOKEN@*/, label: {
                                         Image(systemName: "backward.end.fill")
                                             .resizable()
-                                            .frame(width:28,height:28)
+                                            .frame(width: 28, height: 28)
                                     }) // 上一曲
                                     Spacer()
                                     Button(action: {
@@ -260,13 +260,13 @@ struct HomepageView: View
                                     }, label: {
                                         Image(systemName: isplay ? "pause.fill" : "play.fill")
                                             .resizable()
-                                            .frame(width:28,height:28)
+                                            .frame(width: 28, height: 28)
                                     }) // 暂停播放
                                     Spacer()
                                     Button(action: {}, label: {
                                         Image(systemName: "forward.end.fill")
                                             .resizable()
-                                            .frame(width:28,height:28)
+                                            .frame(width: 28, height: 28)
                                     }) // 下一曲
                                         .padding(.trailing)
                                     Spacer()
@@ -301,7 +301,8 @@ struct HomepageView: View
                                     destination: Foodmessage(),
                                     isActive: $navtoFoodmessage,
                                     label: {
-                                        Group {
+                                        Group
+                                        {
                                             HStack
                                             {
                                                 Image("perch") // 食物图片
@@ -324,7 +325,6 @@ struct HomepageView: View
                                             .padding(.vertical)
                                         }
                                     })
-                               
                             }
                             Spacer()
                         }

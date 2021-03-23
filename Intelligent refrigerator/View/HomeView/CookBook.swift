@@ -136,6 +136,7 @@ struct BanderCook: View {
         }
     }
 }
+
 //分栏菜谱
 struct Recommend: View {
     @Binding var isshow1: Bool
@@ -171,17 +172,17 @@ struct Recommend: View {
             .padding(.horizontal, 20.0)
             .foregroundColor(.white)
             TabView(selection: $index) {
-                RecommendBander(isshowVideo: $isshow1).tag(0)
-                RecommendBander(isshowVideo: $isshow2,image:"").tag(1)
-                RecommendBander(isshowVideo: $isshow3,image:"").tag(2)
+                RecommendBander().tag(0)
+                RecommendBander(image:"").tag(1)
+                RecommendBander(image:"").tag(2)
             }.tabViewStyle(PageTabViewStyle(indexDisplayMode: PageTabViewStyle.IndexDisplayMode.never)).frame(width: UIScreen.main.bounds.width, height: 250, alignment: .center)
         }
         .frame(width: UIScreen.main.bounds.width, height: 300, alignment: .center)
     }
 }
+
 //分栏菜谱卡片
 struct RecommendBander: View {
-    @Binding var isshowVideo: Bool
     var image="perch"
     var sizebig: CGFloat=230
     var sizesmall: CGFloat=230
@@ -190,11 +191,7 @@ struct RecommendBander: View {
             ForEach(0..<3, id: \.self) { _ in
                 NavigationLink(
                     destination: CoolVideo(),
-                    isActive: $isshowVideo,
                     label: {
-                        Button(action: {
-                            self.isshowVideo=true
-                        }, label: {
                             ZStack {
                                 Rectangle()
                                     .fill(Color.Neumorphic.main)
@@ -205,7 +202,7 @@ struct RecommendBander: View {
                                     .frame(width: sizesmall, height: sizesmall, alignment: .center)
                                     .aspectRatio(contentMode: .fill)
                             }
-                        })
+
 
                     })
             }

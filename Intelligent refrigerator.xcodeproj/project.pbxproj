@@ -18,6 +18,11 @@
 		07A71CFE25F0428C002D57B1 /* Thermostat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A71CFD25F0428C002D57B1 /* Thermostat.swift */; };
 		07BEA1A525EEE49C00C52870 /* CoolVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEA1A425EEE49C00C52870 /* CoolVideo.swift */; };
 		07BEA1A825EEEABF00C52870 /* Cookserch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BEA1A725EEEABF00C52870 /* Cookserch.swift */; };
+		092223A526098742002C6332 /* Notes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092223A326098742002C6332 /* Notes+CoreDataClass.swift */; };
+		092223A626098742002C6332 /* Notes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092223A426098742002C6332 /* Notes+CoreDataProperties.swift */; };
+		092223A926098811002C6332 /* NoteAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092223A826098811002C6332 /* NoteAdd.swift */; };
+		092223AC26098879002C6332 /* NoteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092223AB26098879002C6332 /* NoteDetail.swift */; };
+		092223AF2609891C002C6332 /* NoteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092223AE2609891C002C6332 /* NoteList.swift */; };
 		094BE76D25F74BEB0039FED7 /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = 094BE76C25F74BEB0039FED7 /* Neumorphic */; };
 		094BE77C25F750DB0039FED7 /* OftenFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094BE77B25F750DB0039FED7 /* OftenFood.swift */; };
 		094BE78025F7510B0039FED7 /* FoodLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094BE77F25F7510B0039FED7 /* FoodLable.swift */; };
@@ -59,6 +64,11 @@
 		07A71CFD25F0428C002D57B1 /* Thermostat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thermostat.swift; sourceTree = "<group>"; };
 		07BEA1A425EEE49C00C52870 /* CoolVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolVideo.swift; sourceTree = "<group>"; };
 		07BEA1A725EEEABF00C52870 /* Cookserch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cookserch.swift; sourceTree = "<group>"; };
+		092223A326098742002C6332 /* Notes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		092223A426098742002C6332 /* Notes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		092223A826098811002C6332 /* NoteAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteAdd.swift; sourceTree = "<group>"; };
+		092223AB26098879002C6332 /* NoteDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetail.swift; sourceTree = "<group>"; };
+		092223AE2609891C002C6332 /* NoteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteList.swift; sourceTree = "<group>"; };
 		094BE77B25F750DB0039FED7 /* OftenFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OftenFood.swift; sourceTree = "<group>"; };
 		094BE77F25F7510B0039FED7 /* FoodLable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodLable.swift; sourceTree = "<group>"; };
 		094BE78325F7513C0039FED7 /* AddFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFood.swift; sourceTree = "<group>"; };
@@ -153,6 +163,23 @@
 			path = HomeView;
 			sourceTree = "<group>";
 		};
+		092223A0260983C1002C6332 /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Clock;
+			sourceTree = "<group>";
+		};
+		092223A1260985FE002C6332 /* Memorandum */ = {
+			isa = PBXGroup;
+			children = (
+				092223A826098811002C6332 /* NoteAdd.swift */,
+				092223AB26098879002C6332 /* NoteDetail.swift */,
+				092223AE2609891C002C6332 /* NoteList.swift */,
+			);
+			path = Memorandum;
+			sourceTree = "<group>";
+		};
 		30145FA925CB98D10063D2D1 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +200,8 @@
 		304158A125BFCE16000AAFE6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				092223A1260985FE002C6332 /* Memorandum */,
+				092223A0260983C1002C6332 /* Clock */,
 				30FBD22D25F86A2A00D2606C /* Weather */,
 				30CE063F25F61C8000F4F87B /* Speech */,
 				07144B7725F1272F00C7AD42 /* Food */,
@@ -187,6 +216,8 @@
 		30B193A725BFC0D60030E782 = {
 			isa = PBXGroup;
 			children = (
+				092223A326098742002C6332 /* Notes+CoreDataClass.swift */,
+				092223A426098742002C6332 /* Notes+CoreDataProperties.swift */,
 				30B193B225BFC0D60030E782 /* Intelligent refrigerator */,
 				30B193B125BFC0D60030E782 /* Products */,
 			);
@@ -338,15 +369,20 @@
 				30145FAC25CB99680063D2D1 /* TopBarView.swift in Sources */,
 				30FBD22B25F86A1E00D2606C /* WeatherView.swift in Sources */,
 				07A71CFB25F03711002D57B1 /* Doorbellmessage.swift in Sources */,
+				092223A926098811002C6332 /* NoteAdd.swift in Sources */,
 				30145FB025CB9AD30063D2D1 /* TimeAndWeatherView.swift in Sources */,
 				30B193B625BFC0D60030E782 /* ContentView.swift in Sources */,
+				092223A626098742002C6332 /* Notes+CoreDataProperties.swift in Sources */,
 				07144B6C25F10F9E00C7AD42 /* Answer.swift in Sources */,
 				071DCF5925ED90350061CAD2 /* CookBookData.swift in Sources */,
 				30B193B425BFC0D60030E782 /* Intelligent_refrigeratorApp.swift in Sources */,
 				07A71CF825F036F2002D57B1 /* Doorbelled.swift in Sources */,
+				092223A526098742002C6332 /* Notes+CoreDataClass.swift in Sources */,
 				094BE78025F7510B0039FED7 /* FoodLable.swift in Sources */,
+				092223AF2609891C002C6332 /* NoteList.swift in Sources */,
 				30CC939B25F6209700F04483 /* SpeechView.swift in Sources */,
 				07BEA1A525EEE49C00C52870 /* CoolVideo.swift in Sources */,
+				092223AC26098879002C6332 /* NoteDetail.swift in Sources */,
 				30FBD22F25F86A5A00D2606C /* FiveDaysView.swift in Sources */,
 				094BE78C25F751D10039FED7 /* HomepageView.swift in Sources */,
 				30B193C025BFC0D70030E782 /* Intelligent_refrigerator.xcdatamodeld in Sources */,
