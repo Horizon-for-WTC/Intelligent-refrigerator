@@ -33,6 +33,7 @@ struct CookBook: View {
                 .padding(.horizontal)
 
             ScrollView(.vertical, showsIndicators: false) {
+                
                 VStack(spacing: 30.0) {
                     ZStack {
                         // 搜素
@@ -50,8 +51,8 @@ struct CookBook: View {
 
                     // 菜谱
                     Recommend(isshow1: $isshowvideo1, isshow2: $isshowvideo2, isshow3: $isshowvideo3)
-                    BanderCook(isshowVideo: $isshowvideo, title: "收藏菜谱", sizebig: 150, sizesmall: 60)
-                    BanderCook(isshowVideo: $isshowvideo, title: "热门菜谱", sizebig: 150, sizesmall: 60)
+                    BanderCook(isshowVideo: $isshowvideo, title: "收藏菜谱", sizebig: 150, sizesmall: 140)
+                    BanderCook(isshowVideo: $isshowvideo, title: "热门菜谱", sizebig: 150, sizesmall: 140)
                 }
             }
             .navigationBarTitle(Text("菜谱"), displayMode: .inline)
@@ -66,33 +67,14 @@ struct CookBook: View {
     }
 }
 
-struct CookCircleButton: View {
-    @Binding var isshow: Bool
-    var image="cc"
-    var title="接听"
-    var size: CGFloat=100
-    var body: some View {
-        VStack(alignment: .center) {
-            Button(action: {
-                self.isshow.toggle()
-            }, label: {
-                VStack {
-                    Image(image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 150, height: 150, alignment: .center)
-                        .clipShape(Circle())
-                }.frame(width: size, height: size, alignment: .center)
-            }).softButtonStyle(Circle())
-            Text(title).foregroundColor(.gray)
-        }
-    }
-}
 
-//普通菜谱卡片
+
+//菜谱卡片
 struct BanderCook: View {
+    //测试数据
+    var images=["黄焖鸡","糖醋排骨","虾仁菌汤","芝士蛋挞"]
     @Binding var isshowVideo: Bool
-    var image="perch"
+    var image="黄焖鸡"
     var icon=""
     var title="今日菜谱"
     var sizebig: CGFloat=250
@@ -108,7 +90,7 @@ struct BanderCook: View {
             .padding(.horizontal, 25)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    ForEach(0..<5, id: \.self) { _ in
+                    ForEach(images, id: \.self) { value in
                         NavigationLink(
                             destination: CoolVideo(),
                             isActive: $isshowVideo,
@@ -121,7 +103,7 @@ struct BanderCook: View {
                                             .fill(Color.Neumorphic.main)
                                             .frame(width: sizebig, height: sizebig, alignment: .center)
                                             .softOuterShadow()
-                                        Image("\(image)")
+                                        Image("\(value)")
                                             .resizable()
                                             .frame(width: sizesmall, height: sizesmall, alignment: .center)
                                             .aspectRatio(contentMode: .fill)
@@ -137,7 +119,7 @@ struct BanderCook: View {
     }
 }
 
-//分栏菜谱
+//今日菜谱
 struct Recommend: View {
     @Binding var isshow1: Bool
     @Binding var isshow2: Bool
@@ -171,24 +153,27 @@ struct Recommend: View {
             }
             .padding(.horizontal, 20.0)
             .foregroundColor(.white)
+            //今日菜谱分类
             TabView(selection: $index) {
                 RecommendBander().tag(0)
-                RecommendBander(image:"").tag(1)
-                RecommendBander(image:"").tag(2)
+                RecommendBander().tag(1)
+                RecommendBander().tag(2)
             }.tabViewStyle(PageTabViewStyle(indexDisplayMode: PageTabViewStyle.IndexDisplayMode.never)).frame(width: UIScreen.main.bounds.width, height: 250, alignment: .center)
         }
         .frame(width: UIScreen.main.bounds.width, height: 300, alignment: .center)
     }
 }
 
-//分栏菜谱卡片
+//今日菜谱卡片
 struct RecommendBander: View {
-    var image="perch"
+    //测试数据
+    var images=["今日菜谱1","今日菜谱2","今日菜谱3"]
+    var image="今日菜谱1"
     var sizebig: CGFloat=230
-    var sizesmall: CGFloat=230
+    var sizesmall: CGFloat=210
     var body: some View {
         HStack {
-            ForEach(0..<3, id: \.self) { _ in
+            ForEach(images, id: \.self) { value in
                 NavigationLink(
                     destination: CoolVideo(),
                     label: {
@@ -197,7 +182,7 @@ struct RecommendBander: View {
                                     .fill(Color.Neumorphic.main)
                                     .frame(width: sizebig, height: sizebig, alignment: .center)
                                     .softOuterShadow()
-                                Image("\(image)")
+                                Image("\(value)")
                                     .resizable()
                                     .frame(width: sizesmall, height: sizesmall, alignment: .center)
                                     .aspectRatio(contentMode: .fill)
@@ -214,5 +199,28 @@ struct RecommendBander: View {
 struct CookBook_Previews: PreviewProvider {
     static var previews: some View {
         CookBook().preferredColorScheme(.dark)
+    }
+}
+
+struct CookCircleButton: View {
+    @Binding var isshow: Bool
+    var image="cc"
+    var title="接听"
+    var size: CGFloat=100
+    var body: some View {
+        VStack(alignment: .center) {
+            Button(action: {
+                self.isshow.toggle()
+            }, label: {
+                VStack {
+                    Image(image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 150, height: 150, alignment: .center)
+                        .clipShape(Circle())
+                }.frame(width: size, height: size, alignment: .center)
+            }).softButtonStyle(Circle())
+            Text(title).foregroundColor(.gray)
+        }
     }
 }

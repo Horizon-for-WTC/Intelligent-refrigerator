@@ -10,6 +10,8 @@ import WaterfallGrid
 struct QuickerCook: View {
     @Environment(\.presentationMode) var presentationMode
     @State var navtoCookVide0=false
+    //测试数据
+    var images=["宫保鸡丁","红烧茄子","花甲粉","煎饼","可乐鸡翅","糖醋排骨"]
     var body: some View {
         ZStack {
             Color.Neumorphic.main.ignoresSafeArea()
@@ -34,12 +36,12 @@ struct QuickerCook: View {
                 .foregroundColor(.gray)
                 .padding(.horizontal)
                 ScrollView {
-                    WaterfallGrid(0 ..< 10, id: \.self) { _ in
+                    WaterfallGrid(images, id: \.self) { value in
                         NavigationLink(
                             destination: CoolVideo(),
                             isActive: $navtoCookVide0,
                             label: {
-                                Cookmenu().padding()
+                                Cookmenu(image: "\(value)", title: "\(value)").padding()
                             })
                        
                     }

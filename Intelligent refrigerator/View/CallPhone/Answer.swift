@@ -45,6 +45,28 @@ struct Answer: View {
     }
 }
 
+struct CircleButton:View {
+    var image="mic.fill"
+    var title="接听"
+    var size:CGFloat=60
+    var body: some View{
+        VStack(alignment: .center) {
+            Button(action: {
+                print("anxia yuananniu")
+            }, label: {
+                VStack {
+                    Image(systemName: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .font(.system(size: 48))
+                        .foregroundColor(Color.white.opacity(0.4))
+                }.frame(width: size, height: size, alignment: .center)
+            }).softButtonStyle(Circle())
+            Text(title).foregroundColor(.gray)
+        }
+    }
+}
+
 struct Answer_Previews: PreviewProvider {
     static var previews: some View {
         Answer()
