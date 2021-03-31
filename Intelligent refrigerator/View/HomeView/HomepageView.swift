@@ -300,24 +300,23 @@ struct HomepageView: View
                                         Spacer()
                                     }
                                     // 最近过期食物
-                                    ForEach(foods, id: \.self)
-                                    { value in
+                                    ForEach(0..<foods.count, id: \.self)
+                                    { index in
                                         NavigationLink(
-                                            destination: Foodmessage(),
-                                            isActive: $navtoFoodmessage,
+                                            destination: Foodmessage(index:index),
                                             label: {
                                                 Group
                                                 {
                                                     HStack
                                                     {
-                                                        Image(value) // 食物图片
+                                                        Image(foods[index]) // 食物图片
                                                             .resizable()
                                                             .aspectRatio(1, contentMode: .fit)
                                                             .frame(width: 80, height: 80, alignment: .center)
                                                             .clipShape(Circle())
                                                         VStack(alignment: .leading, spacing: 6.0)
                                                         {
-                                                            Text(value) // 食物名称
+                                                            Text("\(foods[index])") // 食物名称
                                                                 .font(.title)
                                                             HStack
                                                             {

@@ -75,7 +75,7 @@ struct BanderCook: View {
     var images=["黄焖鸡","糖醋排骨","虾仁菌汤","芝士蛋挞"]
     @Binding var isshowVideo: Bool
     var image="黄焖鸡"
-    var icon=""
+    var icon="chevron.right"
     var title="今日菜谱"
     var sizebig: CGFloat=250
     var sizesmall: CGFloat=250
@@ -85,7 +85,13 @@ struct BanderCook: View {
                 Text("\(title)")
                     .font(.title)
                 Spacer()
-                Image(systemName: "\(icon)")
+                NavigationLink(
+                    destination: QuickerCook(),
+                    label: {
+                        Image(systemName: "\(icon)")
+                            .foregroundColor(.black)
+                    })
+                
             }
             .padding(.horizontal, 25)
             ScrollView(.horizontal, showsIndicators: false) {

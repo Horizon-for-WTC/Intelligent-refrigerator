@@ -16,6 +16,7 @@ struct NoteList: View {
     @Environment(\.managedObjectContext) var moc
     @Environment(\.presentationMode) var presentationMode
     @State var isshow=false
+    @State var isdel=false
     var body: some View {
         ZStack {
             Color.Neumorphic.main.ignoresSafeArea()
@@ -38,7 +39,8 @@ struct NoteList: View {
                             .sheet(isPresented: $isshow, content: {
                                 NoteAdd()
                             })
-                        Button(action: {}, label: {
+                        // 编辑按钮
+                        Button(action: {self.isdel.toggle()}, label: {
                             Image(systemName: "slider.horizontal.3")
                         })
                     }.padding(.horizontal).imageScale(.large)
@@ -52,7 +54,8 @@ struct NoteList: View {
                     NavigationLink(
                         destination: NoteAdd(name: value.name, index: Int(value.index), content: value.content, date: value.date, isedit: true),
                         label: {
-                            NoteDetail(cjjvalue: value).softOuterShadow()
+                                NoteDetail(cjjvalue: value).softOuterShadow()
+
                         })
                 }.padding()
                 Spacer()

@@ -39,7 +39,6 @@ struct QuickerCook: View {
                     WaterfallGrid(images, id: \.self) { value in
                         NavigationLink(
                             destination: CoolVideo(),
-                            isActive: $navtoCookVide0,
                             label: {
                                 Cookmenu(image: "\(value)", title: "\(value)").padding()
                             })

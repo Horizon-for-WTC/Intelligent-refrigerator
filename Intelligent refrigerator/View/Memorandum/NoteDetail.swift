@@ -20,7 +20,7 @@ struct NoteDetail: View {
         ZStack{
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color.Neumorphic.main)
-                .frame(width: UIScreen.main.bounds.width/2-20, height: 100, alignment: .center)
+                .frame(width: UIScreen.main.bounds.width/2-40, height: 100, alignment: .center)
                 .softOuterShadow()
                
             HStack(alignment: .top){
@@ -36,17 +36,6 @@ struct NoteDetail: View {
                     HStack {
                         Text("\(cjjvalue.name)")
                         Spacer()
-                        Button(action: {
-                            moc.delete(cjjvalue)
-                            do{
-                               try moc.save()
-                            }catch{
-                                print(error.localizedDescription)
-                            }
-                          
-                        }, label: {
-                            Text("del")
-                        }).padding(.trailing)
                     }
                     Text("\(cjjvalue.content)")
                     Text("\(cjjvalue.date,formatter: myDateFormatter)")
@@ -55,9 +44,30 @@ struct NoteDetail: View {
                 .padding(.vertical)
                 Spacer()
             }
+            VStack {
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        moc.delete(cjjvalue)
+                        do{
+                           try moc.save()
+                        }catch{
+                            print(error.localizedDescription)
+                        }
+                      
+                    }, label: {
+                        Image(systemName: "trash.circle.fill")
+                            .font(.system(size: 36))
+                            .offset(x: 0, y: -10.0)
+                            .foregroundColor(.red)
+                    })
+                }
+                Spacer()
+            }
         }
         .frame(width: UIScreen.main.bounds.width/2-20, height: 100, alignment: .center)
         }
+
 }
 
 //struct NoteDetail_Previews: PreviewProvider {

@@ -9,6 +9,9 @@ import SwiftUI
 
 struct Foodmessage: View {
     @Environment(\.presentationMode) var presentationMode
+    //模拟数据
+    @State var arr=["西红柿","生菜","火龙果"]
+    @State var index=0
 //    @Binding var isshow:Bool
     var body: some View {
         ZStack {
@@ -23,18 +26,29 @@ struct Foodmessage: View {
                     .frame(width: UIScreen.main.bounds.width-50, height: UIScreen.main.bounds.height/1.6, alignment: .center)
                 VStack(spacing: 15.0) {
                     HStack {
-                        Button(action:  {}, label: {
+                        Button(action:  {cjjlessen()}, label: {
                             Image(systemName: "chevron.left").font(.title)
                         }).softButtonStyle(Circle())
                         
-                        Image("perch")
-                            .resizable()
-                            .frame(width: 200, height: 200, alignment: .center)
-                        Button(action:  {}, label: {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(Color.Neumorphic.main)
+                                .softOuterShadow()
+                            //模拟
+                            Image("\(arr[index])")
+                                .resizable()
+                                .frame(width: 200, height: 200, alignment: .center)
+                        }.frame(width: 200, height: 200, alignment: .center)
+                        
+                            
+                        Button(action:  {
+                            cjjadd()
+                        }, label: {
                             Image(systemName: "chevron.right").font(.title)
                         }).softButtonStyle(Circle())
                     }.offset(x: 0, y: -70)
-                    Text("西红柿")
+                    //模拟
+                    Text("\(arr[index])")
                         .font(.largeTitle)
                         .padding()
                     VStack(alignment: .leading, spacing: 18.0) {
@@ -55,6 +69,20 @@ struct Foodmessage: View {
                 }
             }.frame(width: UIScreen.main.bounds.width-50, height: UIScreen.main.bounds.height/1.5, alignment: .center)
         }.navigationBarHidden(true).navigationBarBackButtonHidden(true)
+    }
+    func cjjadd() {
+        if index<arr.count-1{
+            index+=1
+        }else{
+            index%=arr.count-1
+        }
+    }
+    func cjjlessen() {
+        if index==0{
+            index=arr.count-1
+        }else{
+            index-=1
+        }
     }
 }
 

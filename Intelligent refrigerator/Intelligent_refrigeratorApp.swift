@@ -14,6 +14,7 @@ struct Intelligent_refrigeratorApp: App {
     var body: some Scene {
         WindowGroup {
             HomepageView()
+               
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
